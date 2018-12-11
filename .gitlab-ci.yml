@@ -1,0 +1,39 @@
+image: golang:1.11
+
+variables:
+  REPO_NAME: informator-69-bot
+
+before_script:
+  - mkdir -p $GOPATH/src/$(dirname $REPO_NAME)
+  - ln -svf $CI_PROJECT_DIR $GOPATH/src/$REPO_NAME
+  - cd $GOPATH/src/$REPO_NAME
+
+stages:
+  - build
+  - test
+  - deploy
+
+building:
+  stage: build
+  script:
+    - go build -o $CI_PROJECT_DIR/informator-69-bot ./app
+
+testing:
+  stage: test
+  script:
+    - go test -race $(go list ./... | grep -v /vendor/)
+
+deploying:
+  stage: deploy
+  only: [master]
+  before_script:
+    - tar -cvzf /tmp/$REPO_NAME.tar.gz --exclude-vcs ../$REPO_NAME
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - ssh-keyscan -t rsa $DEPLOY_HOST >> ~/.ssh/known_hosts
+  script:
+    - scp /tmp/$REPO_NAME.tar.gz deploy.sh root@$DEPLOY_HOST:/root/
+    - ssh -t root@$DEPLOY_HOST "./deploy.sh"

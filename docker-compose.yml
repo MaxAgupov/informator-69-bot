@@ -1,0 +1,8 @@
+bot:
+  build: .
+  container_name: informator-69-bot
+  environment:
+    - BOT_CONFIG=/srv/config/config.json
+  volumes:
+    - ../config:/srv/config
+  restart: always

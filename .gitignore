@@ -1,0 +1,7 @@
+*~
+.idea
+config.json
+activeChats.json
+*.bak
+experiment-69-bot
+config

@@ -1,0 +1,4 @@
+{
+  "api_token": "your_bot_api_token",
+  "storage": "/srv/config/activeChats.json"
+}
