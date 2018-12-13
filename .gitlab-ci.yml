@@ -36,4 +36,4 @@ deploying:
     - ssh-keyscan -t rsa $DEPLOY_HOST >> ~/.ssh/known_hosts
   script:
     - scp /tmp/$REPO_NAME.tar.gz deploy.sh root@$DEPLOY_HOST:/root/
-    - ssh -t root@$DEPLOY_HOST "./deploy.sh"
+    - ssh root@$DEPLOY_HOST "./deploy.sh"
