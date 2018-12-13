@@ -92,7 +92,7 @@ func (report *Report) Events() string {
 }
 
 func (report *Report) setCalendarInfo(day *time.Time) {
-	report.calendarInfo = getCalendarInfo(day)
+	report.calendarInfo = GetCalendarInfo(day)
 }
 
 func getWikiReport(reportDay *time.Time) string {
@@ -115,28 +115,33 @@ func getWikiReport(reportDay *time.Time) string {
 			return ""
 		}
 		var parsedResponse interface{}
-		if err = json.Unmarshal(contents, &parsedResponse); err != nil {
+		if err := json.Unmarshal(contents, &parsedResponse); err != nil {
 			log.Print("Error", err)
-		}
-		query := parsedResponse.(map[string]interface{})["query"]
-		if len(query.(map[string]interface{})) == 0 {
 			return ""
 		}
-		pages := query.(map[string]interface{})["pages"]
-		if l := len(pages.(map[string]interface{})); l == 0 {
-			return ""
-		} else if l > 1 {
-			log.Print("Too many responses - ", l)
-			return ""
-		}
-		// there is only one entry exists
-		var content string
-		for _, v := range pages.(map[string]interface{}) {
-			content = v.(map[string]interface{})["extract"].(string)
-		}
-		return content
+		return ParseWikiContent(parsedResponse)
 	}
 	return ""
+}
+
+func ParseWikiContent(parsedResponse interface{}) string {
+	query := parsedResponse.(map[string]interface{})["query"]
+	if len(query.(map[string]interface{})) == 0 {
+		return ""
+	}
+	pages := query.(map[string]interface{})["pages"]
+	if l := len(pages.(map[string]interface{})); l == 0 {
+		return ""
+	} else if l > 1 {
+		log.Print("Too many responses - ", l)
+		return ""
+	}
+	// there is only one entry exists
+	var content string
+	for _, v := range pages.(map[string]interface{}) {
+		content = v.(map[string]interface{})["extract"].(string)
+	}
+	return content
 }
 
 func GetTodaysReport() string {
@@ -183,19 +188,18 @@ func GetDayNoun(day int) string {
 	}
 }
 
-func getCalendarInfo(reportDay *time.Time) string {
+func GetCalendarInfo(reportDay *time.Time) string {
 	firstLine := getFullDateString(reportDay)
 	location, _ := time.LoadLocation("Europe/Moscow")
 
-	now := time.Now().In(location)
-	year := time.Date(now.Year(), time.December, 31, 0, 0, 0, 0, location)
-	today := now.YearDay()
+	year := time.Date(reportDay.Year(), time.December, 31, 0, 0, 0, 0, location)
+	infoDay := reportDay.YearDay()
 	full_days := year.YearDay()
 
-	rest := full_days - today
+	rest := full_days - infoDay
 	secondLine := ""
 	if rest > 0 {
-		secondLine = strconv.Itoa(today) + "-й день года. До конца года " + strconv.Itoa(rest) + " " + GetDayNoun(today)
+		secondLine = strconv.Itoa(infoDay) + "-й день года. До конца года " + strconv.Itoa(rest) + " " + GetDayNoun(rest)
 	} else {
 		secondLine = "Завтра уже Новый Год!"
 	}

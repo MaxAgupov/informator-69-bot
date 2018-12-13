@@ -1,6 +1,9 @@
 package wiki
 
-import "testing"
+import (
+	"testing"
+	"time"
+)
 
 func TestGetDayNoun(t *testing.T) {
 	checkDays(t, "день", []int{1, 21, 31, 51, 61, 71, 81, 91, 101, 201, 301})
@@ -14,5 +17,15 @@ func checkDays(t *testing.T, noun string, vals []int) {
 		if s != noun {
 			t.Error("Wrong format",  i, s, "( expected",i, noun, ")")
 		}
+	}
+}
+
+func TestGetCalendarInfoIssue(t *testing.T) {
+	location, _ := time.LoadLocation("Europe/Moscow")
+	var date = time.Date(2018, time.December, 7, 1,1,1,0, location)
+	var calcInfo = GetCalendarInfo(&date)
+	var expectedInfo = "*Пятница, 7 декабря 2018 года*\n341-й день года. До конца года 24 дня\n"
+	if expectedInfo != calcInfo {
+		t.Error("Wrong line:", calcInfo, "(", expectedInfo, ")")
 	}
 }
