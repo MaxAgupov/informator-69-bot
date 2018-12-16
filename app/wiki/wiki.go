@@ -1,14 +1,11 @@
 package wiki
 
 import (
-	"bufio"
 	"encoding/json"
-	"errors"
 	"io/ioutil"
 	"log"
 	"net/http"
 	"net/url"
-	"regexp"
 	"strconv"
 	"strings"
 	"time"
@@ -39,15 +36,88 @@ var weekDays = [...]string{
 	"суббота",
 }
 
+const holidaysHeader = "Праздники и памятные дни"
+const intHolidaysSubheader  = "Международные"
+const locHolidaysSubheader  = "Национальные"
+const rlgHolidaysSubheader  = "Религиозные"
+const nameDaysSubheader = "Именины"
+
 type Report struct {
 	calendarInfo string
 	common       []string
+	holidaysInt  []string
+	holidaysLoc  []string
+	holidaysRlg  ReligiousHolidays
+	nameDays     []string
 	sections     map[string][]*Section
+}
+
+type ReligiousHolidays struct {
+	orthodox    []string
+	catholicism []string
+	others      []string
+}
+
+func (holidays *ReligiousHolidays) Empty() bool {
+	return len(holidays.orthodox) == 0 && len(holidays.catholicism) == 0  && len(holidays.others) == 0
+}
+
+func (holidays *ReligiousHolidays) AppendString(formatted *string) {
+	if len(holidays.orthodox) > 0 {
+		for _, line := range holidays.orthodox {
+			*formatted += "- " + line + " (правосл.)\n"
+		}
+	}
+	if len(holidays.catholicism) > 0 {
+		for _, line := range holidays.catholicism {
+			*formatted += "- " + line + " (катол.)\n"
+		}
+	}
+	if len(holidays.others) > 0 {
+		for _, line := range holidays.others {
+			*formatted += "- " + line + "\n"
+		}
+	}
 }
 
 type Section struct {
 	header  string
 	content []string
+}
+
+func (report *Report) String2() string {
+	formattedStr := ""
+	if report.calendarInfo != "" {
+		formattedStr += report.calendarInfo + "\n"
+	}
+
+	if len(report.holidaysInt) > 0 || len(report.holidaysLoc) > 0 || !report.holidaysRlg.Empty() {
+		formattedStr += "*" + holidaysHeader + "*\n"
+		if len(report.holidaysInt) > 0 {
+			formattedStr += "\n_" + intHolidaysSubheader + "_\n"
+			for _,line := range report.holidaysInt {
+				formattedStr += "- " + line + "\n"
+			}
+		}
+		if len(report.holidaysLoc) > 0 {
+			formattedStr += "\n_" + locHolidaysSubheader + "_\n"
+			for _,line := range report.holidaysLoc {
+				formattedStr += "- " + line + "\n"
+			}
+		}
+		if !report.holidaysRlg.Empty() {
+			formattedStr += "\n_" + rlgHolidaysSubheader + "_\n"
+			report.holidaysRlg.AppendString(&formattedStr)
+		}
+	}
+
+	if len(report.nameDays) > 0 {
+		formattedStr += "\n_" + nameDaysSubheader + "_\n"
+		for _,line := range report.nameDays {
+			formattedStr += "- " + line + "\n"
+		}
+	}
+	return formattedStr
 }
 
 func (report *Report) String() string {
@@ -56,7 +126,6 @@ func (report *Report) String() string {
 		formattedStr += report.calendarInfo + "\n"
 	}
 	for k, v := range report.sections {
-		//log.Print(k)
 		if k == "Праздники и памятные дни" {
 			formattedStr += "*" + k + "*\n"
 			for _, sect := range v {
@@ -78,7 +147,6 @@ func (report *Report) Events() string {
 		formattedStr += report.calendarInfo + "\n"
 	}
 	for k, v := range report.sections {
-		//log.Print(k)
 		if k == "События" || k == "Приметы" {
 			formattedStr += "*" + k + "*\n"
 			for _, sect := range v {
@@ -93,6 +161,22 @@ func (report *Report) Events() string {
 
 func (report *Report) setCalendarInfo(day *time.Time) {
 	report.calendarInfo = GetCalendarInfo(day)
+}
+
+type WikiResponse struct {
+	Batchcomplete string    `json:"batchcomplete"`
+	Query         WikiQuery `json:"query"`
+}
+
+type WikiQuery struct {
+	Pages map[string]WikiPages `json:"pages"`
+}
+
+type WikiPages struct {
+	Title   string `json:"title"`
+	Extract string `json:"extract"`
+	PageId  uint64 `json:"pageid"`
+	NS      uint64 `json:"ns"`
 }
 
 func getWikiReport(reportDay *time.Time) string {
@@ -114,32 +198,27 @@ func getWikiReport(reportDay *time.Time) string {
 			log.Print(err)
 			return ""
 		}
-		var parsedResponse interface{}
-		if err := json.Unmarshal(contents, &parsedResponse); err != nil {
+		var wr WikiResponse
+		if err := json.Unmarshal(contents, &wr); err != nil {
 			log.Print("Error", err)
 			return ""
 		}
-		return ParseWikiContent(parsedResponse)
+		return GetWikiContent(&wr)
 	}
 	return ""
 }
 
-func ParseWikiContent(parsedResponse interface{}) string {
-	query := parsedResponse.(map[string]interface{})["query"]
-	if len(query.(map[string]interface{})) == 0 {
-		return ""
-	}
-	pages := query.(map[string]interface{})["pages"]
-	if l := len(pages.(map[string]interface{})); l == 0 {
+func GetWikiContent(wikiResponse *WikiResponse) string {
+	if l := len(wikiResponse.Query.Pages); l == 0 {
 		return ""
 	} else if l > 1 {
 		log.Print("Too many responses - ", l)
 		return ""
 	}
-	// there is only one entry exists
+	// there must be only one entry
 	var content string
-	for _, v := range pages.(map[string]interface{}) {
-		content = v.(map[string]interface{})["extract"].(string)
+	for _, v := range wikiResponse.Query.Pages {
+		content = v.Extract
 	}
 	return content
 }
@@ -149,7 +228,8 @@ func GetTodaysReport() string {
 	log.Print(location)
 	now := time.Now().In(location)
 	fullReport := getWikiReport(&now)
-	report, err := parseWikiReport(fullReport)
+	//report, err := parseWikiReport(fullReport)
+	report, err := Parse(fullReport)
 	report.setCalendarInfo(&now)
 	if err != nil {
 		log.Print("Error:", err)
@@ -205,75 +285,5 @@ func GetCalendarInfo(reportDay *time.Time) string {
 	}
 
 	return firstLine + "\n" + secondLine + "\n"
-}
-
-
-
-func parseWikiReport(fullReport string) (Report, error) {
-	if fullReport == "" {
-		return Report{}, errors.New("empty report")
-	}
-	scanner := bufio.NewScanner(strings.NewReader(fullReport))
-	var header1 string
-	var header2 string
-	re := regexp.MustCompile("В .* церкви")
-	report := Report{sections: map[string][]*Section{}}
-	var currSection *Section
-	for scanner.Scan() {
-		line := scanner.Text()
-		if strings.HasPrefix(line, "== ") && strings.HasSuffix(line, " ==") {
-			header1 = strings.TrimSpace(strings.Trim(line, "=="))
-			header2 = ""
-		} else if strings.HasPrefix(line, "=== ") && strings.HasSuffix(line, " ===") {
-			header2 = strings.TrimSpace(strings.Trim(line, "==="))
-			currSection = &Section{header: header2, content: []string{}}
-			report.sections[header1] = append(report.sections[header1], currSection)
-		} else if line == "" {
-			continue
-		} else {
-			if header1 == "" {
-				report.common = append(report.common, line)
-			} else {
-				if header2 != "" {
-					if header1 == "Праздники и памятные дни" && header2 == "Религиозные" {
-						reMemorial := regexp.MustCompile("память .*")
-						line = strings.TrimSpace(line)
-						if has := re.MatchString(line); has {
-							first := re.FindAllString(line, 2)[0]
-							second := re.Split(line, 2)[1]
-							currSection.content = append(currSection.content, first)
-							if second != "" {
-								currSection.content = append(currSection.content, "- "+second)
-							}
-						} else if has := reMemorial.MatchString(line); has {
-							continue
-						} else {
-							currSection.content = append(currSection.content, "- "+line)
-						}
-					} else {
-						currSection.content = append(currSection.content, "- "+strings.TrimSpace(line))
-					}
-				}
-			}
-		}
-	}
-
-	for _, v := range report.sections {
-		for _, sect := range v {
-			if sect.header == "Религиозные" {
-				clean := true
-				for _, val := range sect.content {
-					if has := re.MatchString(val); !has {
-						clean = false
-					}
-				}
-				if clean {
-					sect.content = []string{}
-				}
-			}
-		}
-	}
-
-	return report, nil
 }
 
