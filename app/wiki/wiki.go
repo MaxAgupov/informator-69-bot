@@ -85,7 +85,7 @@ type Section struct {
 	content []string
 }
 
-func (report *Report) String2() string {
+func (report *Report) String() string {
 	formattedStr := ""
 	if report.calendarInfo != "" {
 		formattedStr += report.calendarInfo + "\n"
@@ -120,7 +120,7 @@ func (report *Report) String2() string {
 	return formattedStr
 }
 
-func (report *Report) String() string {
+func (report *Report) StringOld() string {
 	formattedStr := ""
 	if report.calendarInfo != "" {
 		formattedStr += report.calendarInfo + "\n"
