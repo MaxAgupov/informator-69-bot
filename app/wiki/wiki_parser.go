@@ -45,6 +45,8 @@ func (parser *Parser) parseHolidays(line string) {
 			parser.filledSlice = &parser.report.holidaysInt
 		case locHolidaysSubheader:
 			parser.filledSlice = &parser.report.holidaysLoc
+		case profHolidaysSubheader:
+			parser.filledSlice = &parser.report.holidaysProf
 		case nameDaysSubheader:
 			parser.filledSlice = &parser.report.nameDays
 		default:

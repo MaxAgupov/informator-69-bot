@@ -37,9 +37,10 @@ var weekDays = [...]string{
 }
 
 const holidaysHeader = "Праздники и памятные дни"
-const intHolidaysSubheader  = "Международные"
-const locHolidaysSubheader  = "Национальные"
-const rlgHolidaysSubheader  = "Религиозные"
+const intHolidaysSubheader = "Международные"
+const locHolidaysSubheader = "Национальные"
+const rlgHolidaysSubheader = "Религиозные"
+const profHolidaysSubheader = "Профессиональные"
 const nameDaysSubheader = "Именины"
 
 type Report struct {
@@ -47,6 +48,7 @@ type Report struct {
 	common       []string
 	holidaysInt  []string
 	holidaysLoc  []string
+	holidaysProf []string
 	holidaysRlg  ReligiousHolidays
 	nameDays     []string
 	sections     map[string][]*Section
@@ -59,7 +61,7 @@ type ReligiousHolidays struct {
 }
 
 func (holidays *ReligiousHolidays) Empty() bool {
-	return len(holidays.orthodox) == 0 && len(holidays.catholicism) == 0  && len(holidays.others) == 0
+	return len(holidays.orthodox) == 0 && len(holidays.catholicism) == 0 && len(holidays.others) == 0
 }
 
 func (holidays *ReligiousHolidays) AppendString(formatted *string) {
@@ -91,17 +93,23 @@ func (report *Report) String() string {
 		formattedStr += report.calendarInfo + "\n"
 	}
 
-	if len(report.holidaysInt) > 0 || len(report.holidaysLoc) > 0 || !report.holidaysRlg.Empty() {
+	if len(report.holidaysInt) > 0 || len(report.holidaysLoc) > 0 || len(report.holidaysProf) > 0 || !report.holidaysRlg.Empty() {
 		formattedStr += "*" + holidaysHeader + "*\n"
 		if len(report.holidaysInt) > 0 {
 			formattedStr += "\n_" + intHolidaysSubheader + "_\n"
-			for _,line := range report.holidaysInt {
+			for _, line := range report.holidaysInt {
 				formattedStr += "- " + line + "\n"
 			}
 		}
 		if len(report.holidaysLoc) > 0 {
 			formattedStr += "\n_" + locHolidaysSubheader + "_\n"
-			for _,line := range report.holidaysLoc {
+			for _, line := range report.holidaysLoc {
+				formattedStr += "- " + line + "\n"
+			}
+		}
+		if len(report.holidaysProf) > 0 {
+			formattedStr += "\n_" + profHolidaysSubheader + "_\n"
+			for _, line := range report.holidaysProf {
 				formattedStr += "- " + line + "\n"
 			}
 		}
@@ -113,7 +121,7 @@ func (report *Report) String() string {
 
 	if len(report.nameDays) > 0 {
 		formattedStr += "\n_" + nameDaysSubheader + "_\n"
-		for _,line := range report.nameDays {
+		for _, line := range report.nameDays {
 			formattedStr += "- " + line + "\n"
 		}
 	}
@@ -286,4 +294,3 @@ func GetCalendarInfo(reportDay *time.Time) string {
 
 	return firstLine + "\n" + secondLine + "\n"
 }
-
