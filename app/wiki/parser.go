@@ -37,7 +37,8 @@ func (parser *Parser) setSubheader(subheader string) {
 
 func (parser *Parser) parseHolidays(line string) {
 	line = strings.Trim(line, ".;— ")
-	if parser.subheader == "" {
+	if parser.subheader == "" && !strings.HasPrefix(line, "См. также:") {
+		parser.report.holidaysInt = append(parser.report.holidaysInt, line)
 		return
 	} else if parser.filledSlice == nil && parser.subheader != rlgHolidaysSubheader {
 		switch parser.subheader {
@@ -113,7 +114,7 @@ func (parser *Parser) parseOmens(line string) {
 		parser.filledSlice = &parser.report.omens
 	}
 	lines := strings.Split(line, ".")
-	for _,l := range lines {
+	for _, l := range lines {
 		line = strings.Trim(l, ". ")
 		if line == "" {
 			return
@@ -135,11 +136,11 @@ func Parse(fullReport string) (Report, error) {
 		switch {
 		case strings.HasPrefix(line, "== ") && strings.HasSuffix(line, " =="):
 			switch header := strings.TrimSpace(strings.Trim(line, "==")); header {
-			case holidaysHeader:
+			case holidaysHeader, "Праздники":
 				parser.setHeader(header, parser.parseHolidays)
 			case "События", "Родились", "Скончались":
 				parser.reset()
-			case "Приметы", "Народный календарь":
+			case "Приметы", "Народный календарь", "Народный календарь и приметы", "Народный календарь, приметы", "Народный календарь, приметы и фольклор Руси":
 				parser.setHeader(header, parser.parseOmens)
 			default:
 				parser.reset()
