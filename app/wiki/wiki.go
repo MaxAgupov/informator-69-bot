@@ -8,6 +8,7 @@ import (
 	"net/url"
 	"strconv"
 	"strings"
+	"sync"
 	"time"
 )
 
@@ -43,8 +44,12 @@ const rlgHolidaysSubheader = "Религиозные"
 const profHolidaysSubheader = "Профессиональные"
 const nameDaysSubheader = "Именины"
 
+const moscowLocation = "Europe/Moscow"
+
+var reportCache = ReportCache{}
+
 type Report struct {
-	calendarInfo string
+	stats        string
 	common       []string
 	holidaysInt  []string
 	holidaysLoc  []string
@@ -89,8 +94,8 @@ type Section struct {
 
 func (report *Report) String() string {
 	formattedStr := ""
-	if report.calendarInfo != "" {
-		formattedStr += report.calendarInfo + "\n"
+	if report.stats != "" {
+		formattedStr += report.stats + "\n"
 	}
 
 	if len(report.holidaysInt) > 0 || len(report.holidaysLoc) > 0 || len(report.holidaysProf) > 0 || !report.holidaysRlg.Empty() {
@@ -128,31 +133,10 @@ func (report *Report) String() string {
 	return formattedStr
 }
 
-func (report *Report) StringOld() string {
-	formattedStr := ""
-	if report.calendarInfo != "" {
-		formattedStr += report.calendarInfo + "\n"
-	}
-	for k, v := range report.sections {
-		if k == "Праздники и памятные дни" {
-			formattedStr += "*" + k + "*\n"
-			for _, sect := range v {
-				if len(sect.content) == 0 {
-					continue
-				}
-				formattedStr += "\n_" + sect.header + "_" + "\n"
-				formattedStr += strings.Join(sect.content, "\n") + "\n"
-			}
-			formattedStr += "\n"
-		}
-	}
-	return formattedStr
-}
-
 func (report *Report) Events() string {
 	formattedStr := ""
-	if report.calendarInfo != "" {
-		formattedStr += report.calendarInfo + "\n"
+	if report.stats != "" {
+		formattedStr += report.stats + "\n"
 	}
 	for k, v := range report.sections {
 		if k == "События" || k == "Приметы" {
@@ -168,19 +152,19 @@ func (report *Report) Events() string {
 }
 
 func (report *Report) setCalendarInfo(day *time.Time) {
-	report.calendarInfo = GetCalendarInfo(day)
+	report.stats = GenerateCalendarStats(day)
 }
 
-type WikiResponse struct {
-	Batchcomplete string    `json:"batchcomplete"`
-	Query         WikiQuery `json:"query"`
+type Response struct {
+	Batchcomplete string `json:"batchcomplete"`
+	Query         Query  `json:"query"`
 }
 
-type WikiQuery struct {
-	Pages map[string]WikiPages `json:"pages"`
+type Query struct {
+	Pages map[string]Pages `json:"pages"`
 }
 
-type WikiPages struct {
+type Pages struct {
 	Title   string `json:"title"`
 	Extract string `json:"extract"`
 	PageId  uint64 `json:"pageid"`
@@ -206,43 +190,30 @@ func getWikiReport(reportDay *time.Time) string {
 			log.Print(err)
 			return ""
 		}
-		var wr WikiResponse
+		var wr Response
 		if err := json.Unmarshal(contents, &wr); err != nil {
 			log.Print("Error", err)
 			return ""
 		}
-		return GetWikiContent(&wr)
+
+		if l := len(wr.Query.Pages); l == 0 || l > 1 {
+			log.Print("There must be only one page - ", l)
+			return ""
+		}
+		var content string
+		for _, v := range wr.Query.Pages {
+			content = v.Extract
+		}
+		return content
 	}
 	return ""
 }
 
-func GetWikiContent(wikiResponse *WikiResponse) string {
-	if l := len(wikiResponse.Query.Pages); l == 0 {
-		return ""
-	} else if l > 1 {
-		log.Print("Too many responses - ", l)
-		return ""
-	}
-	// there must be only one entry
-	var content string
-	for _, v := range wikiResponse.Query.Pages {
-		content = v.Extract
-	}
-	return content
-}
-
 func GetTodaysReport() string {
-	location, _ := time.LoadLocation("Europe/Moscow")
+	location, _ := time.LoadLocation(moscowLocation)
 	log.Print(location)
 	now := time.Now().In(location)
-	fullReport := getWikiReport(&now)
-	//report, err := parseWikiReport(fullReport)
-	report, err := Parse(fullReport)
-	report.setCalendarInfo(&now)
-	if err != nil {
-		log.Print("Error:", err)
-		return ""
-	}
+	report := reportCache.getCachedReport(&now)
 	return report.String()
 }
 
@@ -276,11 +247,10 @@ func GetDayNoun(day int) string {
 	}
 }
 
-func GetCalendarInfo(reportDay *time.Time) string {
+func GenerateCalendarStats(reportDay *time.Time) string {
 	firstLine := getFullDateString(reportDay)
-	location, _ := time.LoadLocation("Europe/Moscow")
 
-	year := time.Date(reportDay.Year(), time.December, 31, 0, 0, 0, 0, location)
+	year := time.Date(reportDay.Year(), time.December, 31, 0, 0, 0, 0, time.UTC)
 	infoDay := reportDay.YearDay()
 	full_days := year.YearDay()
 
@@ -293,4 +263,34 @@ func GetCalendarInfo(reportDay *time.Time) string {
 	}
 
 	return firstLine + "\n" + secondLine + "\n"
+}
+
+type ReportCache struct {
+	sync.Mutex
+	year   int
+	month  time.Month
+	day    int
+	report *Report
+}
+
+func (cache *ReportCache) getCachedReport(date *time.Time) Report {
+	cache.Lock()
+	defer cache.Unlock()
+	year, month, day := date.Date()
+	if year == cache.year && month == cache.month && day == cache.day {
+		return *cache.report
+	}
+	fullReport := getWikiReport(date)
+	report, err := Parse(fullReport)
+	if err != nil {
+		log.Print("Error:", err)
+		return Report{}
+	}
+	report.setCalendarInfo(date)
+	cache.report = &report
+	cache.year = year
+	cache.month = month
+	cache.day = day
+
+	return *cache.report
 }

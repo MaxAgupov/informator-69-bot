@@ -42,7 +42,6 @@ func TestParse_1_12(t *testing.T) {
 Платон, Роман
 
 `
-	//report1, _ := parseWikiReport(fullReport)
 	report2, _ := Parse(fullReport)
 	expected := `*Праздники и памятные дни*
 
@@ -68,7 +67,6 @@ _Именины_
 		t.Error(expected, "\n!=\n", s2)
 	}
 }
-
 
 func TestParse_7_12(t *testing.T) {
 	//location, _ := time.LoadLocation("Europe/Moscow")
@@ -119,7 +117,6 @@ func TestParse_7_12(t *testing.T) {
 Католические: Амвросий, Аниан, Виктор, Мария, Поликарп, Серв(ус), Теодор, Юмбер
 Православные: Августа, Александр, Алексей, Григорий, Евгений, Евграф, Екатерина, Ермоген, Иван, Корнелий и Корнилий, Марк, Мастридия, Меркурий, Митрофан, Михаил, Порфирий, Прокопий, Симон, Филофея, Филумен, Христофор
 `
-	//report1, _ := parseWikiReport(fullReport)
 	report2, _ := Parse(fullReport)
 	expected := `*Праздники и памятные дни*
 
@@ -197,7 +194,6 @@ func TestParse_10_12(t *testing.T) {
 Если на заре лицом к северному ветру встать, то сметет он с тебя все надсады, все тяготы.
 В это время у лосей отпадают старые рога, а в берлоге засыпает медведь.
 `
-	//report1, _ := parseWikiReport(fullReport)
 	report2, _ := Parse(fullReport)
 	expected := `*Праздники и памятные дни*
 
@@ -268,7 +264,6 @@ func TestParse_13_12(t *testing.T) {
 
 
 `
-	//report1, _ := parseWikiReport(fullReport)
 	report2, _ := Parse(fullReport)
 	expected := `*Праздники и памятные дни*
 
@@ -336,7 +331,6 @@ func TestParse_18_12(t *testing.T) {
 
 == События ==`
 
-	//report1, _ := parseWikiReport(fullReport)
 	report2, _ := Parse(fullReport)
 	expected := `*Праздники и памятные дни*
 
