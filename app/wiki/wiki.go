@@ -56,6 +56,7 @@ type Report struct {
 	holidaysProf []string
 	holidaysRlg  ReligiousHolidays
 	nameDays     []string
+	omens        []string
 	sections     map[string][]*Section
 }
 
@@ -128,6 +129,17 @@ func (report *Report) String() string {
 		formattedStr += "\n_" + nameDaysSubheader + "_\n"
 		for _, line := range report.nameDays {
 			formattedStr += "- " + line + "\n"
+		}
+	}
+
+	if len(report.omens) > 0 {
+		formattedStr += "\n*" + "Приметы" + "*\n\n"
+		for i, line := range report.omens {
+			if i != 0 {
+				formattedStr += line + "\n"
+			} else {
+				formattedStr += "_" + line + "_\n"
+			}
 		}
 	}
 	return formattedStr

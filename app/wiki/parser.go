@@ -108,6 +108,20 @@ func (parser *Parser) parseHolidays(line string) {
 	*parser.filledSlice = append(*parser.filledSlice, line)
 }
 
+func (parser *Parser) parseOmens(line string) {
+	if parser.filledSlice == nil {
+		parser.filledSlice = &parser.report.omens
+	}
+	lines := strings.Split(line, ".")
+	for _,l := range lines {
+		line = strings.Trim(l, ". ")
+		if line == "" {
+			return
+		}
+		*parser.filledSlice = append(*parser.filledSlice, line)
+	}
+}
+
 func Parse(fullReport string) (Report, error) {
 	report := Report{}
 	if fullReport == "" {
@@ -125,8 +139,8 @@ func Parse(fullReport string) (Report, error) {
 				parser.setHeader(header, parser.parseHolidays)
 			case "События", "Родились", "Скончались":
 				parser.reset()
-			case "Приметы":
-				parser.reset()
+			case "Приметы", "Народный календарь":
+				parser.setHeader(header, parser.parseOmens)
 			default:
 				parser.reset()
 				log.Print("Extra header:", header)
