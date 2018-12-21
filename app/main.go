@@ -1,49 +1,27 @@
 package main
 
 import (
-	"encoding/json"
 	"github.com/go-telegram-bot-api/telegram-bot-api"
+	"github.com/jessevdk/go-flags"
 	"informator-69-bot/app/publisher"
 	"informator-69-bot/app/storage"
 	"informator-69-bot/app/wiki"
 	"log"
-	"os"
 )
 
-type Config struct {
-	ApiToken string `json:"api_token"`
-	Storage  string `json:"storage"`
-}
-
-func getConfig(CfgFileName string) (Config, error) {
-	log.Println("Parse config file:", CfgFileName)
-	file, err := os.Open(CfgFileName)
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer func() {
-		if err := file.Close(); err != nil {
-			log.Print(err)
-		}
-	}()
-	decoder := json.NewDecoder(file)
-	config := Config{}
-	if err := decoder.Decode(&config); err != nil {
-		log.Fatal(err)
-	}
-	return config, nil
+var opts struct {
+	ApiToken string `short:"t" long:"token" env:"API_TOKEN" description:"Telegram bot api token"`
+	Storage  string `short:"s" long:"storage" env:"SUBSCR_STORAGE" description:"File to store subscribers"`
 }
 
 func main() {
-	configFileName := os.Getenv("BOT_CONFIG")
-	if configFileName == "" {
-		configFileName = "config.json"
+	if _, err := flags.Parse(&opts); err != nil {
+		log.Panic(err)
 	}
 
-	config, _ := getConfig(configFileName)
-	store := storage.NewStore(config.Storage)
+	store := storage.NewStore(opts.Storage)
 
-	bot, err := tgbotapi.NewBotAPI(config.ApiToken)
+	bot, err := tgbotapi.NewBotAPI(opts.ApiToken)
 	if err != nil {
 		log.Panic(err)
 	}

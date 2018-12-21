@@ -2,7 +2,8 @@ bot:
   build: .
   container_name: informator-69-bot
   environment:
-    - BOT_CONFIG=/srv/config/config.json
+    - API_TOKEN
+    - SUBSCR_STORAGE=/srv/config/activeChats.json
   volumes:
     - ../config:/srv/config
   restart: always
