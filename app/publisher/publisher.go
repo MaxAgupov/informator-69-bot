@@ -21,7 +21,6 @@ func Notifier(store *storage.ActiveChatsStore, bot *tgbotapi.BotAPI) {
 	for {
 		timer := time.NewTimer(time.Until(nextNotif))
 		<-timer.C
-		// notify all recipients
 		report := wiki.GetTodaysReport()
 		store.RLock()
 		for _, chat := range store.Cache {
