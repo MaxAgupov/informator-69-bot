@@ -38,33 +38,35 @@ func main() {
 	updates, err := bot.GetUpdatesChan(u)
 
 	for update := range updates {
-		if update.Message == nil { // ignore any non-Message Updates
-			continue
-		}
+		if update.Message != nil { // ignore any non-Message Updates
 
-		log.Printf("[%s] %s", update.Message.From.UserName, update.Message.Text)
-
-		if update.Message.IsCommand() {
-			switch update.Message.Command() {
-			case "start":
-				go store.Add(update.Message.Chat.ID)
-				msg := tgbotapi.NewMessage(update.Message.Chat.ID, "You will be receiving useful information")
-				if _, err := bot.Send(msg); err != nil {
-					log.Print(err)
-				}
-			case "stop":
-				go store.Remove(update.Message.Chat.ID)
-				msg := tgbotapi.NewMessage(update.Message.Chat.ID, "You won't be receiving useful information")
-				if _, err := bot.Send(msg); err != nil {
-					log.Print(err)
-				}
-			case "info":
-				msg := tgbotapi.NewMessage(update.Message.Chat.ID, wiki.GetTodaysReport())
-				msg.ParseMode = "markdown"
-				if _, err := bot.Send(msg); err != nil {
-					log.Print(err)
+			log.Printf("[%s] %s", update.Message.From.UserName, update.Message.Text)
+			if update.Message.IsCommand() {
+				switch update.Message.Command() {
+				case "start":
+					go store.Add(update.Message.Chat.ID)
+					msg := tgbotapi.NewMessage(update.Message.Chat.ID, "You will be receiving useful information")
+					if _, err := bot.Send(msg); err != nil {
+						log.Print(err)
+					}
+				case "stop":
+					go store.Remove(update.Message.Chat.ID)
+					msg := tgbotapi.NewMessage(update.Message.Chat.ID, "You won't be receiving useful information")
+					if _, err := bot.Send(msg); err != nil {
+						log.Print(err)
+					}
+				case "info":
+					msg := tgbotapi.NewMessage(update.Message.Chat.ID, wiki.GetTodaysReport())
+					msg.ParseMode = "markdown"
+					if _, err := bot.Send(msg); err != nil {
+						log.Print(err)
+					}
+				case "full":
+					// need to generate message and buttons
 				}
 			}
+		} else if update.CallbackQuery != nil {
+			log.Print("Get callback query")
 		}
 	}
 }
