@@ -92,6 +92,8 @@ func (parser *Parser) parseHolidays(line string) {
 			if line == "" {
 				return
 			}
+		case parser.filledSlice == nil:
+			parser.filledSlice = &parser.report.holidaysRlg.others
 		}
 		reApostle := regexp.MustCompile("память апостол.*")
 		reMemorial := regexp.MustCompile("память .*")
