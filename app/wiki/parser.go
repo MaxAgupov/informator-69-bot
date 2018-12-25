@@ -49,7 +49,9 @@ func (parser *Parser) parseHolidays(line string) {
 		case profHolidaysSubheader:
 			parser.filledSlice = &parser.report.holidaysProf
 		case nameDaysSubheader:
-			parser.filledSlice = &parser.report.nameDays
+			parser.parser = parser.parseNamedays
+			parser.parser(line)
+			return
 		default:
 			parser.subheader = ""
 			return
@@ -109,6 +111,26 @@ func (parser *Parser) parseHolidays(line string) {
 		return
 	}
 	*parser.filledSlice = append(*parser.filledSlice, line)
+}
+
+func (parser *Parser) parseNamedays(line string) {
+	line = strings.Trim(line, ".;— ")
+	reAs := regexp.MustCompile("также:")
+	if has := reAs.MatchString(line); has {
+		lines := reAs.Split(line,2)
+		for _, l := range lines {
+			l = strings.TrimSpace(l)
+			if l != "" {
+				parser.report.nameDays = append(parser.report.nameDays, l)
+			}
+		}
+		return
+	}
+	reAs = regexp.MustCompile("и производные:")
+	if has := reAs.MatchString(line); has {
+		line = reAs.Split(line,2)[0]
+	}
+	parser.report.nameDays = append(parser.report.nameDays, strings.TrimSpace(line))
 }
 
 func (parser *Parser) parseOmens(line string) {

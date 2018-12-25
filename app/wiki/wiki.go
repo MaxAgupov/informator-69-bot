@@ -126,16 +126,28 @@ func (report *Report) String() string {
 	}
 
 	if len(report.nameDays) > 0 {
-		formattedStr += "\n_" + nameDaysSubheader + "_\n"
+		formattedStr += "\n_" + nameDaysSubheader + "_"
+		append := false
 		for _, line := range report.nameDays {
-			formattedStr += "- " + line + "\n"
+			if strings.Contains(line, ":") {
+				formattedStr += "\n- " + line
+				append = false
+			} else {
+				if append {
+					formattedStr += ", " + line
+				} else {
+					formattedStr += "\n- " + line
+					append = true
+				}
+			}
 		}
+		formattedStr += "\n"
 	}
 
-	if len(report.omens) > 0 {
+	if l := len(report.omens); l > 0 {
 		formattedStr += "\n*" + "Приметы" + "*\n\n"
 		for i, line := range report.omens {
-			if i != 0 {
+			if i > 0 {
 				formattedStr += line + "\n"
 			} else {
 				formattedStr += "_" + line + "_\n"
