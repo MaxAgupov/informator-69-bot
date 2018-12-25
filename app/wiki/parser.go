@@ -137,11 +137,41 @@ func (parser *Parser) parseOmens(line string) {
 	if parser.filledSlice == nil {
 		parser.filledSlice = &parser.report.omens
 	}
-	lines := strings.Split(line, ".")
-	for _, l := range lines {
-		line = strings.Trim(l, ". ")
+	var replacer = strings.NewReplacer("«", "\"", "»", "\"")
+	line = replacer.Replace(line)
+
+	fi := strings.Index(line, `"`)
+	li := strings.LastIndex(line, `"`)
+	if fi == -1 && li == -1 {
+		parser.appendOmens(line, true)
+		return
+	}
+	if fi > 0 {
+		parser.appendOmens(line[:fi], true)
+	}
+	if li > 0 {
+		parser.appendOmens(line[fi:li+1], false)
+	}
+	if len(line) > li {
+		parser.appendOmens(line[li+1:], true)
+	}
+}
+
+func (parser *Parser) appendOmens(line string, split bool) {
+	if !split {
+		line = strings.Trim(line, "…,. ")
 		if line == "" {
 			return
+		}
+		*parser.filledSlice = append(*parser.filledSlice, line)
+		return
+	}
+
+	lines := strings.Split(line, ".")
+	for _, l := range lines {
+		line = strings.Trim(l, "…,. ")
+		if line == "" {
+			continue
 		}
 		*parser.filledSlice = append(*parser.filledSlice, line)
 	}
