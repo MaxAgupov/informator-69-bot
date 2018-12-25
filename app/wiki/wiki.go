@@ -147,10 +147,12 @@ func (report *Report) String() string {
 	if l := len(report.omens); l > 0 {
 		formattedStr += "\n*" + "Приметы" + "*\n\n"
 		for i, line := range report.omens {
-			if i > 0 {
+			if i > 0 && i < 5 {
 				formattedStr += line + "\n"
-			} else {
+			} else if i == 0 {
 				formattedStr += "_" + line + "_\n"
+			} else {
+				break
 			}
 		}
 	}
