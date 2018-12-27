@@ -61,6 +61,7 @@ func (parser *Parser) parseHolidays(line string) {
 		reOrth := regexp.MustCompile("Православие")
 		reCath := regexp.MustCompile("Католицизм")
 		reOth := regexp.MustCompile("Другие конфессии")
+		reOth2 := regexp.MustCompile("В католичестве и протестантстве")
 		switch {
 		case re.MatchString(line):
 			first := re.FindAllString(line, 2)[0]
@@ -91,6 +92,12 @@ func (parser *Parser) parseHolidays(line string) {
 		case reOth.MatchString(line):
 			parser.filledSlice = &parser.report.holidaysRlg.others
 			line = reOth.Split(line, 2)[1]
+			if line == "" {
+				return
+			}
+		case reOth2.MatchString(line):
+			parser.filledSlice = &parser.report.holidaysRlg.others
+			line = reOth2.Split(line, 2)[1]
 			if line == "" {
 				return
 			}
