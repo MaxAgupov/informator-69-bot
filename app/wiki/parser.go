@@ -78,11 +78,20 @@ func (parser *Parser) parseHolidays(line string) {
 				return
 			}
 		case reOrth.MatchString(line):
-			parser.filledSlice = &parser.report.holidaysRlg.orthodox
-			line = reOrth.Split(line, 2)[1]
-			if line == "" {
-				return
+			index := reOrth.FindStringIndex(line)
+			if index[0] == 0 {
+				parser.filledSlice = &parser.report.holidaysRlg.orthodox
+				line = reOrth.Split(line, 2)[1]
+				if line == "" {
+					return
+				}
+			} else {
+				lines := reOrth.Split(line, 2)
+				parser.parseHolidays(lines[0])
+				parser.filledSlice = &parser.report.holidaysRlg.orthodox
+				line = lines[1]
 			}
+
 		case reCath.MatchString(line):
 			parser.filledSlice = &parser.report.holidaysRlg.catholicism
 			line = reCath.Split(line, 2)[1]
