@@ -74,17 +74,11 @@ func (parser *Parser) parseHolidays(line string) {
 			default:
 				parser.filledSlice = &parser.report.holidaysRlg.others
 			}
-			if line == "" {
-				return
-			}
 		case reOrth.MatchString(line):
 			index := reOrth.FindStringIndex(line)
 			if index[0] == 0 {
 				parser.filledSlice = &parser.report.holidaysRlg.orthodox
 				line = reOrth.Split(line, 2)[1]
-				if line == "" {
-					return
-				}
 			} else {
 				lines := reOrth.Split(line, 2)
 				parser.parseHolidays(lines[0])
@@ -95,21 +89,12 @@ func (parser *Parser) parseHolidays(line string) {
 		case reCath.MatchString(line):
 			parser.filledSlice = &parser.report.holidaysRlg.catholicism
 			line = reCath.Split(line, 2)[1]
-			if line == "" {
-				return
-			}
 		case reOth.MatchString(line):
 			parser.filledSlice = &parser.report.holidaysRlg.others
 			line = reOth.Split(line, 2)[1]
-			if line == "" {
-				return
-			}
 		case reOth2.MatchString(line):
 			parser.filledSlice = &parser.report.holidaysRlg.others
 			line = reOth2.Split(line, 2)[1]
-			if line == "" {
-				return
-			}
 		case parser.filledSlice == nil:
 			parser.filledSlice = &parser.report.holidaysRlg.others
 		}
@@ -124,6 +109,9 @@ func (parser *Parser) parseHolidays(line string) {
 	}
 	if parser.filledSlice == nil {
 		log.Print("Error parsing:", line)
+		return
+	}
+	if line == "" {
 		return
 	}
 	*parser.filledSlice = append(*parser.filledSlice, line)
