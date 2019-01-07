@@ -181,6 +181,18 @@ func (parser *Parser) appendOmens(line string, split bool) {
 	}
 }
 
+func (parser *Parser) parseRlgHeader(line string) {
+	line = strings.TrimSpace(line)
+	switch line {
+	case "Православие":
+		parser.filledSlice = &parser.report.holidaysRlg.orthodox
+	case "Католицизм":
+		parser.filledSlice = &parser.report.holidaysRlg.catholicism
+	default:
+		parser.filledSlice = &parser.report.holidaysRlg.others
+	}
+}
+
 func Parse(fullReport string) (Report, error) {
 	report := Report{}
 	if fullReport == "" {
@@ -206,6 +218,8 @@ func Parse(fullReport string) (Report, error) {
 			}
 		case strings.HasPrefix(line, "=== ") && strings.HasSuffix(line, " ==="):
 			parser.setSubheader(strings.Trim(line, "==="))
+		case strings.HasPrefix(line, "==== ") && strings.HasSuffix(line, " ===="):
+			parser.parseRlgHeader(strings.Trim(line, "===="))
 		case line == "":
 			continue
 		default:
