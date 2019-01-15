@@ -12,17 +12,17 @@ func TestGetDayNoun(t *testing.T) {
 }
 
 func checkDays(t *testing.T, noun string, vals []int) {
-	for _,i := range vals {
+	for _, i := range vals {
 		s := GetDayNoun(i)
 		if s != noun {
-			t.Error("Wrong format",  i, s, "( expected",i, noun, ")")
+			t.Error("Wrong format", i, s, "( expected", i, noun, ")")
 		}
 	}
 }
 
 func TestGetCalendarInfoIssue(t *testing.T) {
 	location, _ := time.LoadLocation(moscowLocation)
-	var date = time.Date(2018, time.December, 7, 1,1,1,0, location)
+	var date = time.Date(2018, time.December, 7, 1, 1, 1, 0, location)
 	var calcInfo = GenerateCalendarStats(&date)
 	var expectedInfo = "*Пятница, 7 декабря 2018 года*\n341-й день года. До конца года 24 дня\n"
 	if expectedInfo != calcInfo {
