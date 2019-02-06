@@ -57,7 +57,7 @@ func (parser *Parser) parseHolidays(line string) {
 			return
 		}
 	} else if parser.subheader == rlgHolidaysSubheader {
-		re := regexp.MustCompile("В .* церкви")
+		re := regexp.MustCompile("В .* церкв(и|ях)")
 		reOrth := regexp.MustCompile("Православие")
 		reCath := regexp.MustCompile("Католицизм")
 		reOth := regexp.MustCompile("Другие конфессии")
@@ -66,12 +66,19 @@ func (parser *Parser) parseHolidays(line string) {
 		reOth4 := regexp.MustCompile("Зороастризм")
 		switch {
 		case re.MatchString(line):
-			first := re.FindAllString(line, 2)[0]
-			line = re.Split(line, 2)[1]
-			switch first {
-			case "В православной церкви":
+			index := re.FindStringIndex(line)
+			lines := re.Split(line, 2)
+			title := line;
+			if index[0] == 0 {
+				line = lines[1]
+			} else {
+				parser.parseHolidays(lines[0])
+				line = lines[1]
+			}
+			switch {
+			case strings.Contains(title, "православн"):
 				parser.filledSlice = &parser.report.holidaysRlg.orthodox
-			case "В католичечкой церкви":
+			case strings.Contains(title, "католич"):
 				parser.filledSlice = &parser.report.holidaysRlg.catholicism
 			default:
 				parser.filledSlice = &parser.report.holidaysRlg.others
@@ -126,11 +133,12 @@ func (parser *Parser) parseHolidays(line string) {
 				parser.filledSlice = &parser.report.holidaysRlg.others
 				line = lines[1]
 			}
-		case parser.filledSlice == nil:
-			parser.filledSlice = &parser.report.holidaysRlg.others
 		case strings.Contains(line, "Русская Православная Церковь"):
 			parser.filledSlice = &parser.report.holidaysRlg.orthodox
 			return
+		case parser.filledSlice == nil:
+			parser.filledSlice = &parser.report.holidaysRlg.others
+
 		}
 		reApostle := regexp.MustCompile("память апостол.*")
 		reMemorial := regexp.MustCompile("память .*")
