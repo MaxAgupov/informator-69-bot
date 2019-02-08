@@ -183,23 +183,11 @@ func (parser *Parser) parseOmens(line string) {
 	if parser.filledSlice == nil {
 		parser.filledSlice = &parser.report.omens
 	}
-	var replacer = strings.NewReplacer("«", "\"", "»", "\"")
-	line = replacer.Replace(line)
 
-	fi := strings.Index(line, `"`)
-	li := strings.LastIndex(line, `"`)
-	if fi == -1 && li == -1 {
+	if len(*parser.filledSlice) != 0 {
+		parser.appendOmens(line, false)
+	} else {
 		parser.appendOmens(line, true)
-		return
-	}
-	if fi > 0 {
-		parser.appendOmens(line[:fi], true)
-	}
-	if li > 0 {
-		parser.appendOmens(line[fi:li+1], false)
-	}
-	if len(line) > li {
-		parser.appendOmens(line[li+1:], true)
 	}
 }
 
