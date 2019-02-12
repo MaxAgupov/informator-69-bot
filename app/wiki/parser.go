@@ -37,7 +37,10 @@ func (parser *Parser) setSubheader(subheader string) {
 
 func (parser *Parser) parseHolidays(line string) {
 	line = strings.Trim(line, ".;— :")
-	if parser.subheader == "" && !strings.HasPrefix(line, "См. также:") {
+	if strings.HasPrefix(line, "См. также:") {
+		return
+	}
+	if parser.subheader == "" {
 		parser.report.holidaysInt = append(parser.report.holidaysInt, line)
 		return
 	} else if parser.filledSlice == nil && parser.subheader != rlgHolidaysSubheader {
