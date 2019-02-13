@@ -56,11 +56,13 @@ func main() {
 						log.Print(err)
 					}
 				case "info":
-					msg := tgbotapi.NewMessage(update.Message.Chat.ID, wiki.GetTodaysReport())
-					msg.ParseMode = "markdown"
-					if _, err := bot.Send(msg); err != nil {
-						log.Print(err)
-					}
+					publisher.SendMessage(update.Message.Chat.ID, "Текущая информация", bot)
+					publisher.SendMessage(update.Message.Chat.ID, wiki.GetTodaysReport(), bot)
+					//msg := tgbotapi.NewMessage(update.Message.Chat.ID, wiki.GetTodaysReport())
+					//msg.ParseMode = "markdown"
+					//if _, err := bot.Send(msg); err != nil {
+					//	log.Print(err)
+					//}
 				case "full":
 					// need to generate message and buttons
 				}

@@ -24,14 +24,19 @@ func Notifier(store *storage.ActiveChatsStore, bot *tgbotapi.BotAPI) {
 		report := wiki.GetTodaysReport()
 		store.RLock()
 		for _, chat := range store.Cache {
-			msg := tgbotapi.NewMessage(chat.Id, report)
-			msg.ParseMode = "markdown"
-			if _, err := bot.Send(msg); err != nil {
-				log.Print(err)
-			}
+			SendMessage(chat.Id, "Доброе утро", bot)
+			SendMessage(chat.Id, report, bot)
 		}
 		store.RUnlock()
 		nextNotif = nextNotif.AddDate(0, 0, 1)
+	}
+}
+
+func SendMessage(chatId int64, report string, bot *tgbotapi.BotAPI) {
+	msg := tgbotapi.NewMessage(chatId, report)
+	msg.ParseMode = "markdown"
+	if _, err := bot.Send(msg); err != nil {
+		log.Print(err)
 	}
 }
 
