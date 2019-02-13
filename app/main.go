@@ -45,24 +45,12 @@ func main() {
 				switch update.Message.Command() {
 				case "start":
 					go store.Add(update.Message.Chat.ID)
-					msg := tgbotapi.NewMessage(update.Message.Chat.ID, "You will be receiving useful information")
-					if _, err := bot.Send(msg); err != nil {
-						log.Print(err)
-					}
+					publisher.SendMessage(update.Message.Chat.ID, "You will be receiving useful information", bot)
 				case "stop":
 					go store.Remove(update.Message.Chat.ID)
-					msg := tgbotapi.NewMessage(update.Message.Chat.ID, "You won't be receiving useful information")
-					if _, err := bot.Send(msg); err != nil {
-						log.Print(err)
-					}
+					publisher.SendMessage(update.Message.Chat.ID, "You won't be receiving useful information", bot)
 				case "info":
-					publisher.SendMessage(update.Message.Chat.ID, "Текущая информация", bot)
 					publisher.SendMessage(update.Message.Chat.ID, wiki.GetTodaysReport(), bot)
-					//msg := tgbotapi.NewMessage(update.Message.Chat.ID, wiki.GetTodaysReport())
-					//msg.ParseMode = "markdown"
-					//if _, err := bot.Send(msg); err != nil {
-					//	log.Print(err)
-					//}
 				case "full":
 					// need to generate message and buttons
 				}

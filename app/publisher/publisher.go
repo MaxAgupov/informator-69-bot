@@ -39,4 +39,3 @@ func SendMessage(chatId int64, report string, bot *tgbotapi.BotAPI) {
 		log.Print(err)
 	}
 }
-
