@@ -9,30 +9,30 @@ import (
 )
 
 type Parser struct {
-	report      *Report
-	header      string
-	subheader   string
-	filledSlice *[]string
-	parser      func(line string)
+	report       *Report
+	header       string
+	subheader    string
+	currentArray *[]string
+	parser       func(line string)
 }
 
 func (parser *Parser) reset() {
 	parser.header = ""
 	parser.subheader = ""
-	parser.filledSlice = nil
+	parser.currentArray = nil
 	parser.parser = nil
 }
 
 func (parser *Parser) setHeader(header string, parserFunc func(line string)) {
 	parser.header = header
 	parser.subheader = ""
-	parser.filledSlice = nil
+	parser.currentArray = nil
 	parser.parser = parserFunc
 }
 
 func (parser *Parser) setSubheader(subheader string) {
 	parser.subheader = strings.TrimSpace(subheader)
-	parser.filledSlice = nil
+	parser.currentArray = nil
 }
 
 func (parser *Parser) parseHolidays(line string) {
@@ -43,14 +43,14 @@ func (parser *Parser) parseHolidays(line string) {
 	if parser.subheader == "" {
 		parser.report.holidaysInt = append(parser.report.holidaysInt, line)
 		return
-	} else if parser.filledSlice == nil && parser.subheader != rlgHolidaysSubheader {
+	} else if parser.currentArray == nil && parser.subheader != rlgHolidaysSubheader {
 		switch parser.subheader {
 		case intHolidaysSubheader:
-			parser.filledSlice = &parser.report.holidaysInt
+			parser.currentArray = &parser.report.holidaysInt
 		case locHolidaysSubheader:
-			parser.filledSlice = &parser.report.holidaysLoc
+			parser.currentArray = &parser.report.holidaysLoc
 		case profHolidaysSubheader:
-			parser.filledSlice = &parser.report.holidaysProf
+			parser.currentArray = &parser.report.holidaysProf
 		case nameDaysSubheader:
 			parser.parser = parser.parseNamedays
 			parser.parser(line)
@@ -63,100 +63,18 @@ func (parser *Parser) parseHolidays(line string) {
 		if line == "Христианские" {
 			return
 		}
-		re := regexp.MustCompile("В .* церкв(и|ях)")
-		reOrth := regexp.MustCompile("Православие")
-		reCath := regexp.MustCompile("Католицизм")
-		reOth := regexp.MustCompile("Другие конфессии")
-		reOth2 := regexp.MustCompile("В католичестве и протестантстве")
-		reOth3 := regexp.MustCompile("Славянские праздники")
-		reOth4 := regexp.MustCompile("Зороастризм")
-		islam := regexp.MustCompile("Ислам(ские|.?)")
+		orthRegex := regexp.MustCompile("Православие|В .*[Пп]равосл.* церкв(и|ях)|(\\(|.*)Русская Православная Церковь(\\)|.*)")
+		cathRegex := regexp.MustCompile("Католицизм|В [Кк]атолич.* церкв(и|ях)")
+		othersRegex := regexp.MustCompile("Зороастризм|Другие конфессии|В католичестве и протестантстве|Славянские праздники|Ислам(ские|.?)|В Древневосточных церквях")
 		switch {
-		case re.MatchString(line):
-			index := re.FindStringIndex(line)
-			lines := re.Split(line, 2)
-			title := line;
-			if index[0] == 0 {
-				line = lines[1]
-			} else {
-				parser.parseHolidays(lines[0])
-				line = lines[1]
-			}
-			switch {
-			case strings.Contains(title, "православн"):
-				parser.filledSlice = &parser.report.holidaysRlg.orthodox
-			case strings.Contains(title, "католич"):
-				parser.filledSlice = &parser.report.holidaysRlg.catholicism
-			default:
-				parser.filledSlice = &parser.report.holidaysRlg.others
-			}
-		case reOrth.MatchString(line):
-			index := reOrth.FindStringIndex(line)
-			if index[0] == 0 {
-				parser.filledSlice = &parser.report.holidaysRlg.orthodox
-				line = reOrth.Split(line, 2)[1]
-			} else {
-				lines := reOrth.Split(line, 2)
-				parser.parseHolidays(lines[0])
-				parser.filledSlice = &parser.report.holidaysRlg.orthodox
-				line = lines[1]
-			}
-		case reCath.MatchString(line):
-			index := reCath.FindStringIndex(line)
-			if index[0] == 0 {
-				parser.filledSlice = &parser.report.holidaysRlg.catholicism
-				line = reCath.Split(line, 2)[1]
-			} else {
-				lines := reCath.Split(line, 2)
-				parser.parseHolidays(lines[0])
-				parser.filledSlice = &parser.report.holidaysRlg.catholicism
-				line = lines[1]
-			}
-		case reOth.MatchString(line):
-			parser.filledSlice = &parser.report.holidaysRlg.others
-			line = reOth.Split(line, 2)[1]
-		case islam.MatchString(line):
-			index := islam.FindStringIndex(line)
-			if index[0] == 0 {
-				parser.filledSlice = &parser.report.holidaysRlg.others
-				line = islam.Split(line, 2)[1]
-			} else {
-				lines := islam.Split(line, 2)
-				parser.parseHolidays(lines[0])
-				parser.filledSlice = &parser.report.holidaysRlg.others
-				line = lines[1]
-			}
-		case reOth2.MatchString(line):
-			parser.filledSlice = &parser.report.holidaysRlg.others
-			line = reOth2.Split(line, 2)[1]
-		case reOth3.MatchString(line):
-			index := reOth3.FindStringIndex(line)
-			if index[0] == 0 {
-				parser.filledSlice = &parser.report.holidaysRlg.others
-				line = reOth3.Split(line, 2)[1]
-			} else {
-				lines := reOth3.Split(line, 2)
-				parser.parseHolidays(lines[0])
-				parser.filledSlice = &parser.report.holidaysRlg.others
-				line = lines[1]
-			}
-		case reOth4.MatchString(line):
-			index := reOth4.FindStringIndex(line)
-			if index[0] == 0 {
-				parser.filledSlice = &parser.report.holidaysRlg.others
-				line = reOth4.Split(line, 2)[1]
-			} else {
-				lines := reOth4.Split(line, 2)
-				parser.parseHolidays(lines[0])
-				parser.filledSlice = &parser.report.holidaysRlg.others
-				line = lines[1]
-			}
-		case strings.Contains(line, "Русская Православная Церковь"):
-			parser.filledSlice = &parser.report.holidaysRlg.orthodox
-			return
-		case parser.filledSlice == nil:
-			parser.filledSlice = &parser.report.holidaysRlg.others
-
+		case orthRegex.MatchString(line):
+			line = parser.splitLineWithHeader(orthRegex, line, &parser.report.holidaysRlg.orthodox)
+		case cathRegex.MatchString(line):
+			line = parser.splitLineWithHeader(cathRegex, line, &parser.report.holidaysRlg.catholicism)
+		case othersRegex.MatchString(line):
+			line = parser.splitLineWithHeader(othersRegex, line, &parser.report.holidaysRlg.others)
+		case parser.currentArray == nil:
+			parser.currentArray = &parser.report.holidaysRlg.others
 		}
 		reApostle := regexp.MustCompile("память апостол.*")
 		reMemorial := regexp.MustCompile("^память .*")
@@ -167,14 +85,28 @@ func (parser *Parser) parseHolidays(line string) {
 			}
 		}
 	}
-	if parser.filledSlice == nil {
+	if parser.currentArray == nil {
 		log.Print("Error parsing:", line)
 		return
 	}
 	if line == "" {
 		return
 	}
-	*parser.filledSlice = append(*parser.filledSlice, line)
+	*parser.currentArray = append(*parser.currentArray, line)
+}
+
+func (parser *Parser) splitLineWithHeader(headerRegexp *regexp.Regexp, line string, filled *[]string) string {
+	index := headerRegexp.FindStringIndex(line)
+	if index[0] == 0 {
+		parser.currentArray = filled
+		line = headerRegexp.Split(line, 2)[1]
+	} else {
+		lines := headerRegexp.Split(line, 2)
+		parser.parseHolidays(lines[0])
+		parser.currentArray = filled
+		line = lines[1]
+	}
+	return line
 }
 
 func (parser *Parser) parseNamedays(line string) {
@@ -198,11 +130,11 @@ func (parser *Parser) parseNamedays(line string) {
 }
 
 func (parser *Parser) parseOmens(line string) {
-	if parser.filledSlice == nil {
-		parser.filledSlice = &parser.report.omens
+	if parser.currentArray == nil {
+		parser.currentArray = &parser.report.omens
 	}
 
-	if len(*parser.filledSlice) != 0 {
+	if len(*parser.currentArray) != 0 {
 		parser.appendOmens(line, false)
 	} else {
 		parser.appendOmens(line, true)
@@ -215,7 +147,7 @@ func (parser *Parser) appendOmens(line string, split bool) {
 		if line == "" {
 			return
 		}
-		*parser.filledSlice = append(*parser.filledSlice, line)
+		*parser.currentArray = append(*parser.currentArray, line)
 		return
 	}
 
@@ -225,7 +157,7 @@ func (parser *Parser) appendOmens(line string, split bool) {
 		if line == "" {
 			continue
 		}
-		*parser.filledSlice = append(*parser.filledSlice, line)
+		*parser.currentArray = append(*parser.currentArray, line)
 	}
 }
 
