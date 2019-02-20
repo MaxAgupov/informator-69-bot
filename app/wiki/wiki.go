@@ -60,10 +60,16 @@ type Report struct {
 	sections     map[string][]*Section
 }
 
+type ReligiousHolidayDescr struct {
+	description string
+	groupAbbr   string
+}
+
 type ReligiousHolidays struct {
-	orthodox    []string
-	catholicism []string
-	others      []string
+	orthodox              []string
+	catholicism           []string
+	others                []string
+	ReligiousHolidayDescr []string
 }
 
 func (holidays *ReligiousHolidays) Empty() bool {
