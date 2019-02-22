@@ -61,35 +61,34 @@ type Report struct {
 }
 
 type ReligiousHolidayDescr struct {
-	description string
-	groupAbbr   string
+	descriptions []string
+	groupAbbr    string
 }
 
 type ReligiousHolidays struct {
-	orthodox              []string
-	catholicism           []string
-	others                []string
-	ReligiousHolidayDescr []string
+	holidays []*ReligiousHolidayDescr
 }
 
 func (holidays *ReligiousHolidays) Empty() bool {
-	return len(holidays.orthodox) == 0 && len(holidays.catholicism) == 0 && len(holidays.others) == 0
+	empty := true
+	for _, item := range holidays.holidays {
+		if len(item.descriptions) > 0 {
+			empty = false
+		}
+	}
+	return empty
 }
 
 func (holidays *ReligiousHolidays) AppendString(formatted *string) {
-	if len(holidays.orthodox) > 0 {
-		for _, line := range holidays.orthodox {
-			*formatted += "- " + line + " (правосл.)\n"
-		}
-	}
-	if len(holidays.catholicism) > 0 {
-		for _, line := range holidays.catholicism {
-			*formatted += "- " + line + " (катол.)\n"
-		}
-	}
-	if len(holidays.others) > 0 {
-		for _, line := range holidays.others {
-			*formatted += "- " + line + "\n"
+	if len(holidays.holidays) > 0 {
+		for _, items := range holidays.holidays {
+			for _, line := range items.descriptions {
+				*formatted += "- " + line
+				if items.groupAbbr != "" {
+					*formatted += " (" + items.groupAbbr + ")"
+				}
+				*formatted += "\n"
+			}
 		}
 	}
 }
