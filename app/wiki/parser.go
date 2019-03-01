@@ -63,11 +63,14 @@ func (parser *Parser) parseHolidays(line string) {
 		if line == "Христианские" {
 			return
 		}
+		extraLinkMatch := regexp.MustCompile("\\(.*, см. .* .*\\)")
 		orthRegex := regexp.MustCompile("Православие|В .*[Пп]равосл.* церкв(и|ях)|(\\(|.*)Русская Православная Церковь(\\)|.*)")
 		cathRegex := regexp.MustCompile("Католицизм|В [Кк]атолич.* церкв(и|ях)")
 		othersRegex := regexp.MustCompile("Зороастризм|Другие конфессии|В католичестве и протестантстве|Славянские праздники|Ислам(ские|.?)|В Древневосточных церквях")
 		bahaiRegex := regexp.MustCompile("Бахаи")
 		switch {
+		case extraLinkMatch.MatchString(line):
+			line = parser.splitLineWithHeader(extraLinkMatch, line, nil)
 		case orthRegex.MatchString(line):
 			newItem := ReligiousHolidayDescr{groupAbbr: "правосл."}
 			parser.report.holidaysRlg.holidays = append(parser.report.holidaysRlg.holidays, &newItem)
@@ -111,12 +114,16 @@ func (parser *Parser) parseHolidays(line string) {
 func (parser *Parser) splitLineWithHeader(headerRegexp *regexp.Regexp, line string, filled *[]string) string {
 	index := headerRegexp.FindStringIndex(line)
 	if index[0] == 0 {
-		parser.currentArray = filled
+		if filled != nil {
+			parser.currentArray = filled
+		}
 		line = headerRegexp.Split(line, 2)[1]
 	} else {
 		lines := headerRegexp.Split(line, 2)
 		parser.parseHolidays(lines[0])
-		parser.currentArray = filled
+		if filled != nil {
+			parser.currentArray = filled
+		}
 		line = lines[1]
 	}
 	return line
