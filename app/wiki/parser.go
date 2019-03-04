@@ -63,7 +63,7 @@ func (parser *Parser) parseHolidays(line string) {
 		if line == "Христианские" {
 			return
 		}
-		extraLinkMatch := regexp.MustCompile("\\(.*, см. .* .*\\)")
+		extraLinkMatch := regexp.MustCompile("\\(.*, см. .* .*\\)|Примечание: указано для невисокосных лет, в високосные годы список иной, см. .* .*\\.")
 		orthRegex := regexp.MustCompile("Православие|В .*[Пп]равосл.* церкв(и|ях)|(\\(|.*)Русская Православная Церковь(\\)|.*)")
 		cathRegex := regexp.MustCompile("Католицизм|В [Кк]атолич.* церкв(и|ях)")
 		othersRegex := regexp.MustCompile("Зороастризм|Другие конфессии|В католичестве и протестантстве|Славянские праздники|Ислам(ские|.?)|В Древневосточных церквях")
