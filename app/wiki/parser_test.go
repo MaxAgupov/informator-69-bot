@@ -4,6 +4,13 @@ import (
 	"testing"
 )
 
+func validateStrings(t *testing.T, expected string, actual string) {
+	if expected == actual {
+		return
+	}
+	t.Error("Expected:\n", expected, "\nActual:\n", actual)
+}
+
 func TestParse_1_12(t *testing.T) {
 	//location, _ := time.LoadLocation("Europe/Moscow")
 	//now := time.Date(2018, time.December, 1, 1, 1, 1, 1, location)
@@ -63,9 +70,7 @@ _Именины_
 - Платон, Роман
 `
 	s2 := report2.String()
-	if expected != s2 {
-		t.Error(expected, "\n!=\n", s2)
-	}
+	validateStrings(t, expected, s2)
 }
 
 func TestParse_4_12(t *testing.T) {
@@ -138,9 +143,7 @@ _«Введенье, Ворота зимы»_
 «Введение пришло — зиму привело»
 `
 	s2 := report2.String()
-	if expected != s2 {
-		t.Error(expected, "\n!=\n", s2)
-	}
+	validateStrings(t, expected, s2)
 }
 
 func TestParse_7_12(t *testing.T) {
@@ -208,9 +211,7 @@ _Именины_
 `
 
 	s2 := report2.String()
-	if expected != s2 {
-		t.Error(expected, "\n!=\n", s2)
-	}
+	validateStrings(t, expected, s2)
 }
 
 func TestParse_10_12(t *testing.T) {
@@ -305,9 +306,7 @@ _Романов день_
 `
 
 	s2 := report2.String()
-	if expected != s2 {
-		t.Error(expected, "\n!=\n", s2)
-	}
+	validateStrings(t, expected, s2)
 }
 
 func TestParse_13_12(t *testing.T) {
@@ -370,9 +369,7 @@ _Андреева ночь_
 В старину на Андрея наслушивали воду: поутру шли на реку, рубили прорубь, прежде чем зачерпнуть воды, опускались на колени на краю проруби, прижимались ухом ко льду и слушали:Когда шумная вода, то надо ждать метели, стужи
 `
 	s2 := report2.String()
-	if expected != s2 {
-		t.Error(expected, "\n!=\n", s2)
-	}
+	validateStrings(t, expected, s2)
 }
 
 func TestParse_18_12(t *testing.T) {
@@ -443,9 +440,7 @@ _Именины_
 - Православные: Анастасий, Гурий, Захар, Карион, Нектарий, Савва
 `
 	s2 := report2.String()
-	if expected != s2 {
-		t.Error(expected, "\n!=\n", s2)
-	}
+	validateStrings(t, expected, s2)
 }
 
 func TestParse_19_12(t *testing.T) {
@@ -490,9 +485,7 @@ _Религиозные_
 - блаженного Максима, митрополита Киевского и всея Руси (ум. 1305) (правосл.)
 `
 	s2 := report2.String()
-	if expected != s2 {
-		t.Error(expected, "\n!=\n", s2)
-	}
+	validateStrings(t, expected, s2)
 }
 
 func TestParse_24_12(t *testing.T) {
@@ -552,9 +545,7 @@ _Именины_
 - Адам, Александр, Никон, Даниил, Емельян, Иван, Леонтий, Николай, Пётр, Терентий
 `
 	s2 := report2.String()
-	if expected != s2 {
-		t.Error(expected, "\n!=\n", s2)
-	}
+	validateStrings(t, expected, s2)
 }
 
 func TestParse_25_12(t *testing.T) {
@@ -673,9 +664,7 @@ _Спиридон Солнцеворот_
 На солнцеворот жгли костры ввечеру, чем помогали солнцу окрепнуть: «Разгони, огонь, потемки. Верни на Русь красный день»
 `
 	s2 := report2.String()
-	if expected != s2 {
-		t.Error(expected, "\n!=\n", s2)
-	}
+	validateStrings(t, expected, s2)
 }
 
 func TestParse_27_12(t *testing.T) {
@@ -734,9 +723,7 @@ _Филимонов день_
 Выходят ехидны, кикиморы и жалятся у оконниц, а нетопыри ухают, белесоватые глазницы пучат
 `
 	s2 := report2.String()
-	if expected != s2 {
-		t.Error(expected, "\n!=\n", s2)
-	}
+	validateStrings(t, expected, s2)
 }
 
 func TestParse_02_01(t *testing.T) {
@@ -822,9 +809,7 @@ _Игнатий Богоносец_
 Если, для оберега дома, 1 января полагалось поклониться земле, то 2 января приходила пора дом оберечь: вокруг дома (или сразу всей деревни или села) крестьяне обносили иконы
 `
 	s2 := report2.String()
-	if expected != s2 {
-		t.Error(expected, "\n!=\n", s2)
-	}
+	validateStrings(t, expected, s2)
 }
 
 func TestParse_06_01(t *testing.T) {
@@ -869,9 +854,7 @@ _Религиозные_
 - На́вечерие Рождества Христова (Рождественский сочельник) (правосл.)
 `
 	s2 := report2.String()
-	if expected != s2 {
-		t.Error(expected, "\n!=\n", s2)
-	}
+	validateStrings(t, expected, s2)
 }
 
 func TestParse_07_01(t *testing.T) {
@@ -910,9 +893,7 @@ _Религиозные_
 - Рождество Христово — в церквях, пользующихся юлианским календарём: Русской, Иерусалимской, Грузинской, Сербской, Польской.День памяти Иоанна Крестителя в Греций (правосл.)
 `
 	s2 := report2.String()
-	if expected != s2 {
-		t.Error(expected, "\n!=\n", s2)
-	}
+	validateStrings(t, expected, s2)
 }
 
 func TestParse_13_01(t *testing.T) {
@@ -960,9 +941,7 @@ _Религиозные_
 - отдание праздника Рождества Христова (правосл.)
 `
 	s2 := report2.String()
-	if expected != s2 {
-		t.Error(expected, "\n!=\n", s2)
-	}
+	validateStrings(t, expected, s2)
 }
 
 func TestParse_14_01(t *testing.T) {
@@ -1037,9 +1016,7 @@ _Именины_
 - Женские: Эмилия
 `
 	s2 := report2.String()
-	if expected != s2 {
-		t.Error(expected, "\n!=\n", s2)
-	}
+	validateStrings(t, expected, s2)
 }
 
 func TestParse_28_01(t *testing.T) {
@@ -1087,9 +1064,7 @@ _Религиозные_
 - Велесичи (Кудесы) — День домового
 `
 	s2 := report2.String()
-	if expected != s2 {
-		t.Error(expected, "\n!=\n", s2)
-	}
+	validateStrings(t, expected, s2)
 }
 
 func TestParse_30_01(t *testing.T) {
@@ -1145,9 +1120,7 @@ _Религиозные_
 - Гаханбар, посвящённый Воху-Ману
 `
 	s2 := report2.String()
-	if expected != s2 {
-		t.Error(expected, "\n!=\n", s2)
-	}
+	validateStrings(t, expected, s2)
 }
 
 func TestParse_01_02(t *testing.T) {
@@ -1217,9 +1190,7 @@ _Именины_
 - Православные: Антоний, Арсений, Евфимий, Евфрасия, Макарий, Марк, Мелетий, Николай, Пётр, Савва, Феодор, Феодосия, Януарий
 `
 	s2 := report2.String()
-	if expected != s2 {
-		t.Error(expected, "\n!=\n", s2)
-	}
+	validateStrings(t, expected, s2)
 }
 
 func TestParse_04_02(t *testing.T) {
@@ -1262,9 +1233,7 @@ _Национальные_
 - Япония — Риссюн — Начало весны (Новый год)
 `
 	s2 := report2.String()
-	if expected != s2 {
-		t.Error(expected, "\n!=\n", s2)
-	}
+	validateStrings(t, expected, s2)
 }
 
 func TestParse_08_02(t *testing.T) {
@@ -1340,9 +1309,7 @@ _Именины_
 - Православные: Аммон, Ананий, Давид, Климент, Ксенофонт, Мария, Павла, Пётр, Симеон, Фёдор, Аркадий
 `
 	s2 := report2.String()
-	if expected != s2 {
-		t.Error(expected, "\n!=\n", s2)
-	}
+	validateStrings(t, expected, s2)
 }
 
 func TestParse_26_02(t *testing.T) {
@@ -1398,9 +1365,7 @@ _Религиозные_
 - Дни Айам-и-Ха (Вставные дни) (бахаи)
 `
 	s2 := report2.String()
-	if expected != s2 {
-		t.Error(expected, "\n!=\n", s2)
-	}
+	validateStrings(t, expected, s2)
 }
 
 func TestParse_01_03(t *testing.T) {
@@ -1457,9 +1422,7 @@ _Национальные_
 - Япония — Национальный день борьбы за мир, День Бикини
 `
 	s2 := report2.String()
-	if expected != s2 {
-		t.Error(expected, "\n!=\n", s2)
-	}
+	validateStrings(t, expected, s2)
 }
 
 func TestParse_04_03(t *testing.T) {
@@ -1513,9 +1476,7 @@ _Религиозные_
 - Собор всех преподобных отцов Киево-Печерских (переходящее празднование в 2018 году) (правосл.)
 `
 	s2 := report2.String()
-	if expected != s2 {
-		t.Error(expected, "\n!=\n", s2)
-	}
+	validateStrings(t, expected, s2)
 }
 
 func TestParse_12_03(t *testing.T) {
@@ -1574,7 +1535,5 @@ _Национальные_
 - США — День девочек-скаутов
 `
 	s2 := report2.String()
-	if expected != s2 {
-		t.Error(expected, "\n!=\n", s2)
-	}
+	validateStrings(t, expected, s2)
 }
