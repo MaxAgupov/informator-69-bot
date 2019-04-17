@@ -64,8 +64,8 @@ func (parser *Parser) parseHolidays(line string) {
 			return
 		}
 		extraLinkMatch := regexp.MustCompile("Примечание: указано для невисокосных лет, в високосные годы список иной, см. \\d+ .*?\\.|\\(.*, см. \\d+ .*?\\)")
-		orthRegex := regexp.MustCompile("Православие|В .*[Пп]равосл.* церкв(и|ях)|(\\(|.*)Русская Православная Церковь(\\)|.*)")
-		cathRegex := regexp.MustCompile("Католицизм|В [Кк]атолич.* церкв(и|ях)")
+		orthRegex := regexp.MustCompile("Православ(ие|ные)|В .*[Пп]равосл.* церкв(и|ях)|(\\(|.*)Русская Православная Церковь(\\)|.*)")
+		cathRegex := regexp.MustCompile("Католи(цизм|ческие)|В [Кк]атолич.* церкв(и|ях)")
 		othersRegex := regexp.MustCompile("Зороастризм|Другие конфессии|В католичестве и протестантстве|Славянские праздники|Ислам(ские|.?)|В Древневосточных церквях")
 		bahaiRegex := regexp.MustCompile("Бахаи")
 		switch {
@@ -93,7 +93,7 @@ func (parser *Parser) parseHolidays(line string) {
 			parser.currentArray = &newItem.descriptions
 		}
 		reApostle := regexp.MustCompile("память апостол.*")
-		reMemorial := regexp.MustCompile("^память .*")
+		reMemorial := regexp.MustCompile("^[Пп]амять .*")
 
 		if has := reMemorial.MatchString(line); has {
 			if has = reApostle.MatchString(line); !has {
