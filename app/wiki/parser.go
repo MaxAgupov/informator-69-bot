@@ -36,7 +36,7 @@ func (parser *Parser) setSubheader(subheader string) {
 }
 
 func (parser *Parser) parseHolidays(line string) {
-	line = strings.Trim(line, ".;— :")
+	line = strings.Trim(line, ".;— ")
 	if strings.HasPrefix(line, "См. также:") {
 		return
 	}
@@ -64,9 +64,9 @@ func (parser *Parser) parseHolidays(line string) {
 			return
 		}
 		extraLinkMatch := regexp.MustCompile("Примечание: указано для невисокосных лет, в високосные годы список иной, см. \\d+ .*?\\.|\\(.*, см. \\d+ .*?\\)")
-		orthRegex := regexp.MustCompile("Православ(ие|ные)|В .*[Пп]равосл.* церкв(и|ях)|(\\(|.*)Русская Православная Церковь(\\)|.*)")
+		orthRegex := regexp.MustCompile("Православ(ие|ные)|В .*[Пп]равосл.* церкв(и|ях):?|(\\(|.*)Русская Православная Церковь(\\)|.*)")
 		cathRegex := regexp.MustCompile("Католи(цизм|ческие)|В [Кк]атолич.* церкв(и|ях)")
-		othersRegex := regexp.MustCompile("Зороастризм|Другие конфессии|В католичестве и протестантстве|Славянские праздники|Ислам(ские|.?)|В Древневосточных церквях")
+		othersRegex := regexp.MustCompile("Зороастризм|Другие конфессии|В католичестве и протестантстве|:?Славянские праздники:?|Ислам(ские|.?)|В Древневосточных церквях")
 		bahaiRegex := regexp.MustCompile("Бахаи")
 		switch {
 		case extraLinkMatch.MatchString(line):
