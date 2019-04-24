@@ -44,13 +44,15 @@ func main() {
 			if update.Message.IsCommand() {
 				switch update.Message.Command() {
 				case "start":
-					go store.Add(update.Message.Chat.ID)
+					go store.AddChat(update.Message.Chat.ID)
 					publisher.SendMessage(update.Message.Chat.ID, "You will be receiving useful information", bot)
 				case "stop":
-					go store.Remove(update.Message.Chat.ID)
+					go store.RemoveChat(update.Message.Chat.ID)
 					publisher.SendMessage(update.Message.Chat.ID, "You won't be receiving useful information", bot)
 				case "info":
 					publisher.SendMessage(update.Message.Chat.ID, wiki.GetTodaysReport(), bot)
+				case "city":
+					go store.AddCity(update.Message)
 				case "full":
 					// need to generate message and buttons
 				}

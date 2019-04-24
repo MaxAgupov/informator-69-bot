@@ -2,13 +2,21 @@ package storage
 
 import (
 	"encoding/json"
+	"github.com/go-telegram-bot-api/telegram-bot-api"
 	"log"
 	"os"
 	"sync"
 )
 
 type Chat struct {
-	Id int64 `json:"id"`
+	Id     int64   `json:"id"`
+	//Cities *[]City `json:"cities"`
+}
+
+type City struct {
+	UserId int64  `json:"user_id"`
+	CityRu string `json:"city_ru"`
+	CityEn string `json:"city_en"`
 }
 
 type ActiveChatsStore struct {
@@ -39,11 +47,12 @@ func NewStore(Storage string) *ActiveChatsStore {
 	}
 }
 
-func (store *ActiveChatsStore) Add(Id int64) {
-	newChat := Chat{Id}
+func (store *ActiveChatsStore) AddChat(ChatId int64) {
+	//newChat := Chat{ChatId, nil}
+	newChat := Chat{ChatId}
 	store.Lock()
 	defer store.Unlock()
-	store.Cache[Id] = newChat
+	store.Cache[ChatId] = newChat
 	if err := os.Rename(store.storage, store.storage+".bak"); err != nil {
 		log.Println("Can't create storage backup:", err)
 		return
@@ -60,10 +69,10 @@ func (store *ActiveChatsStore) Add(Id int64) {
 	}
 }
 
-func (store *ActiveChatsStore) Remove(Id int64) {
+func (store *ActiveChatsStore) RemoveChat(ChatId int64) {
 	store.Lock()
 	defer store.Unlock()
-	delete(store.Cache, Id)
+	delete(store.Cache, ChatId)
 	if err := os.Rename(store.storage, store.storage+".bak"); err != nil {
 		log.Println("Can't create storage backup:", err)
 		return
@@ -78,6 +87,16 @@ func (store *ActiveChatsStore) Remove(Id int64) {
 	if err := encoder.Encode(store.Cache); err != nil {
 		log.Print(err)
 	}
+}
 
+func (store *ActiveChatsStore) AddCity(Msg *tgbotapi.Message) {
+	log.Println("Msg.Chat.ID=", Msg.Chat.ID)
+	log.Println("Msg.Chat.Type=", Msg.Chat.Type)
+	if Msg.From != nil {
+		log.Println("Msg.From.ID=", Msg.From.ID)
+		log.Println("Msg.From.ID=", Msg.From.UserName)
+	} else {
+		log.Println("Msg.From=", Msg.From)
+	}
 }
 

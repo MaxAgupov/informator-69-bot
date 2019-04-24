@@ -2,6 +2,14 @@
 
 
 [[projects]]
+  digest = "1:6160bdb80d03a9adafb52678b60f59fb1cf7d1a1291d128b8e66b2b5825c6ed1"
+  name = "github.com/briandowns/openweathermap"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "2adae1e5d10290d8cd435bd30296fc5e8f754862"
+  version = "0.12"
+
+[[projects]]
   digest = "1:51712f342cdefcad2c867f399a3ce8223675221d4386c81cfcccd8f0656e722e"
   name = "github.com/go-telegram-bot-api/telegram-bot-api"
   packages = ["."]
@@ -29,6 +37,7 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/briandowns/openweathermap",
     "github.com/go-telegram-bot-api/telegram-bot-api",
     "github.com/jessevdk/go-flags",
   ]
