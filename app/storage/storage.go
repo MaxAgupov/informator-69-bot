@@ -3,20 +3,21 @@ package storage
 import (
 	"encoding/json"
 	"github.com/go-telegram-bot-api/telegram-bot-api"
+	"informator-69-bot/app/weather"
 	"log"
 	"os"
 	"sync"
 )
 
 type Chat struct {
-	Id     int64   `json:"id"`
+	Id int64 `json:"id"`
 	//Cities *[]City `json:"cities"`
 }
 
 type City struct {
-	UserId int64  `json:"user_id"`
-	CityRu string `json:"city_ru"`
-	CityEn string `json:"city_en"`
+	UserId   int    `json:"user_id"`
+	CityId   int64  `json:"city_id"`
+	CityName string `json:"city_name"`
 }
 
 type ActiveChatsStore struct {
@@ -95,8 +96,23 @@ func (store *ActiveChatsStore) AddCity(Msg *tgbotapi.Message) {
 	if Msg.From != nil {
 		log.Println("Msg.From.ID=", Msg.From.ID)
 		log.Println("Msg.From.ID=", Msg.From.UserName)
+		cityName := Msg.CommandArguments()
+		city := NewCity(Msg.From.ID, cityName)
+		log.Println("City validation = ", city.ValidateCity())
 	} else {
 		log.Println("Msg.From=", Msg.From)
 	}
+	log.Println("Msg=", Msg.CommandArguments())
 }
 
+func NewCity(UserId int, CityNameRu string) City {
+	return City{UserId, 0, CityNameRu}
+}
+
+func (city *City) ValidateCity() bool {
+	weather := weather.GetCurrentWeather(city.CityName)
+	if weather != nil {
+		return true
+	}
+	return false
+}
