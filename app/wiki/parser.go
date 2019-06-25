@@ -163,6 +163,7 @@ func (parser *Parser) parseOmens(line string) {
 
 func (parser *Parser) appendOmens(line string, split bool) {
 	if !split {
+		line = strings.Replace(line, "* ", "", -1);
 		line = strings.Trim(line, "…,. ")
 		if line == "" {
 			return
