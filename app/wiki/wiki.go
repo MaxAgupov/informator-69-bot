@@ -57,7 +57,7 @@ type Report struct {
 	holidaysRlg  ReligiousHolidays
 	nameDays     []string
 	omens        []string
-	sections     map[string][]*Section
+	//sections     map[string][]*Section
 }
 
 type ReligiousHolidayDescr struct {
@@ -93,10 +93,10 @@ func (holidays *ReligiousHolidays) AppendString(formatted *string) {
 	}
 }
 
-type Section struct {
-	header  string
-	content []string
-}
+//type Section struct {
+//	header  string
+//	content []string
+//}
 
 func (report *Report) String() string {
 	formattedStr := ""
@@ -164,23 +164,23 @@ func (report *Report) String() string {
 	return formattedStr
 }
 
-func (report *Report) Events() string {
-	formattedStr := ""
-	if report.stats != "" {
-		formattedStr += report.stats + "\n"
-	}
-	for k, v := range report.sections {
-		if k == "События" || k == "Приметы" {
-			formattedStr += "*" + k + "*\n"
-			for _, sect := range v {
-				formattedStr += "\n_" + sect.header + "_" + "\n"
-				formattedStr += strings.Join(sect.content, "\n") + "\n"
-			}
-			formattedStr += "\n"
-		}
-	}
-	return formattedStr
-}
+//func (report *Report) Events() string {
+//	formattedStr := ""
+//	if report.stats != "" {
+//		formattedStr += report.stats + "\n"
+//	}
+//	for k, v := range report.sections {
+//		if k == "События" || k == "Приметы" {
+//			formattedStr += "*" + k + "*\n"
+//			for _, sect := range v {
+//				formattedStr += "\n_" + sect.header + "_" + "\n"
+//				formattedStr += strings.Join(sect.content, "\n") + "\n"
+//			}
+//			formattedStr += "\n"
+//		}
+//	}
+//	return formattedStr
+//}
 
 func (report *Report) setCalendarInfo(day *time.Time) {
 	report.stats = GenerateCalendarStats(day)
@@ -325,3 +325,5 @@ func (cache *ReportCache) getCachedReport(date *time.Time) Report {
 
 	return *cache.report
 }
+
+
