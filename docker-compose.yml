@@ -7,5 +7,5 @@ bot:
     - HOLIDAYS_FILE=/srv/config/holidays/holidays.v1.json
   volumes:
     - ../config:/srv/config
-    - holidays:/srv/config/holidays
+    - ./holidays:/srv/holidays
   restart: always
