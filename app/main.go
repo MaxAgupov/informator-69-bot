@@ -12,7 +12,7 @@ import (
 var opts struct {
 	ApiToken string `short:"t" long:"token" env:"API_TOKEN" description:"Telegram bot api token"`
 	Storage  string `short:"s" long:"storage" env:"SUBSCR_STORAGE" description:"File to store subscribers"`
-	Holidays string `short:"s" long:"holidays" env:"HOLIDAYS_FILE" description:"File to get holidays"`
+	Holidays string `short:"h" long:"holidays" env:"HOLIDAYS_FILE" description:"File to get holidays"`
 }
 
 func main() {
