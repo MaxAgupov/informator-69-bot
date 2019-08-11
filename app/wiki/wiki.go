@@ -164,24 +164,6 @@ func (report *Report) String() string {
 	return formattedStr
 }
 
-//func (report *Report) Events() string {
-//	formattedStr := ""
-//	if report.stats != "" {
-//		formattedStr += report.stats + "\n"
-//	}
-//	for k, v := range report.sections {
-//		if k == "События" || k == "Приметы" {
-//			formattedStr += "*" + k + "*\n"
-//			for _, sect := range v {
-//				formattedStr += "\n_" + sect.header + "_" + "\n"
-//				formattedStr += strings.Join(sect.content, "\n") + "\n"
-//			}
-//			formattedStr += "\n"
-//		}
-//	}
-//	return formattedStr
-//}
-
 func (report *Report) setCalendarInfo(day *time.Time) {
 	report.stats = GenerateCalendarStats(day)
 }
@@ -245,6 +227,19 @@ func GetTodaysReport() string {
 	log.Print(location)
 	now := time.Now().In(location)
 	report := reportCache.getCachedReport(&now)
+	return report.String()
+}
+
+func GetReport(holidays *Holidays) string {
+	location, _ := time.LoadLocation(moscowLocation)
+	log.Print(location)
+	today := time.Now().In(location)
+
+	var month = *(*holidays)[today.Month()]
+	var day = *month[today.Day()]
+	var report = day.Report
+
+	report.setCalendarInfo(&today)
 	return report.String()
 }
 
@@ -325,5 +320,3 @@ func (cache *ReportCache) getCachedReport(date *time.Time) Report {
 
 	return *cache.report
 }
-
-

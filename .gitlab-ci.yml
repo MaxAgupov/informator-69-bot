@@ -1,6 +1,7 @@
 image: golang:1.12
 
 variables:
+  REPO_HOME: /root
   REPO_NAME: informator-69-bot
 
 before_script:
@@ -35,5 +36,5 @@ deploying:
     - chmod 700 ~/.ssh
     - ssh-keyscan -t rsa $DEPLOY_HOST >> ~/.ssh/known_hosts
   script:
-    - scp /tmp/$REPO_NAME.tar.gz scripts/deploy.sh root@$DEPLOY_HOST:/root/
+    - scp /tmp/$REPO_NAME.tar.gz scripts/deploy.sh root@$DEPLOY_HOST:$REPO_HOME
     - ssh root@$DEPLOY_HOST API_TOKEN=$API_TOKEN "./deploy.sh"
