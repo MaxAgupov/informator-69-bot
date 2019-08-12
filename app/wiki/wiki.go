@@ -235,12 +235,17 @@ func GetReport(holidays *Holidays) string {
 	log.Print(location)
 	today := time.Now().In(location)
 
-	var month = *(*holidays)[today.Month()]
-	var day = *month[today.Day()]
-	var report = day.Report
+	var report = ExtractReport(holidays, today.Month(), today.Day())
 
 	report.setCalendarInfo(&today)
 	return report.String()
+}
+
+func ExtractReport(holidays *Holidays, month time.Month, day int) Report {
+	log.Println("Extract info", month, day)
+	var m = *(*holidays)[month]
+	var d = *m[day]
+	return d.Report
 }
 
 func getDateString(day *time.Time) string {

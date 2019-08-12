@@ -17,6 +17,7 @@ type MonthHolidays map[int]*DayHolidays
 type Holidays map[time.Month]*MonthHolidays
 
 func LoadHolidays(holidaysFileName string) Holidays {
+	log.Println("Holidays file name:", holidaysFileName)
 	var holidays = Holidays{}
 
 	file, err := os.OpenFile(holidaysFileName, os.O_RDONLY, 0666)

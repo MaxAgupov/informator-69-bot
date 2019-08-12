@@ -29,3 +29,12 @@ func TestGetCalendarInfoIssue(t *testing.T) {
 		t.Error("Wrong line:", calcInfo, "(", expectedInfo, ")")
 	}
 }
+
+func TestGetFileResult(t *testing.T) {
+	var testFileName = "holidays_test.json"
+	holi := LoadHolidays(testFileName)
+	ExtractReport(&holi, time.January, 1)
+	//if report == nil {
+	//	t.Error("Wrong report")
+	//}
+}
