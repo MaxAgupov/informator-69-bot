@@ -41,16 +41,16 @@ func (parser *Parser) parseHolidays(line string) {
 		return
 	}
 	if parser.subheader == "" {
-		parser.report.holidaysInt = append(parser.report.holidaysInt, line)
+		parser.report.HolidaysInt = append(parser.report.HolidaysInt, line)
 		return
 	} else if parser.currentArray == nil && parser.subheader != rlgHolidaysSubheader {
 		switch parser.subheader {
 		case intHolidaysSubheader:
-			parser.currentArray = &parser.report.holidaysInt
+			parser.currentArray = &parser.report.HolidaysInt
 		case locHolidaysSubheader:
-			parser.currentArray = &parser.report.holidaysLoc
+			parser.currentArray = &parser.report.HolidaysLoc
 		case profHolidaysSubheader:
-			parser.currentArray = &parser.report.holidaysProf
+			parser.currentArray = &parser.report.HolidaysProf
 		case nameDaysSubheader:
 			parser.parser = parser.parseNamedays
 			parser.parser(line)
@@ -72,25 +72,25 @@ func (parser *Parser) parseHolidays(line string) {
 		case extraLinkMatch.MatchString(line):
 			line = parser.splitLineWithHeader(extraLinkMatch, line, nil)
 		case orthRegex.MatchString(line):
-			newItem := ReligiousHolidayDescr{groupAbbr: "правосл."}
-			parser.report.holidaysRlg.holidays = append(parser.report.holidaysRlg.holidays, &newItem)
-			line = parser.splitLineWithHeader(orthRegex, line, &newItem.descriptions)
+			newItem := ReligiousHolidayDescr{GroupAbbr: "правосл."}
+			parser.report.HolidaysRlg.Holidays = append(parser.report.HolidaysRlg.Holidays, &newItem)
+			line = parser.splitLineWithHeader(orthRegex, line, &newItem.Descriptions)
 		case cathRegex.MatchString(line):
-			newItem := ReligiousHolidayDescr{groupAbbr: "катол."}
-			parser.report.holidaysRlg.holidays = append(parser.report.holidaysRlg.holidays, &newItem)
-			line = parser.splitLineWithHeader(cathRegex, line, &newItem.descriptions)
+			newItem := ReligiousHolidayDescr{GroupAbbr: "катол."}
+			parser.report.HolidaysRlg.Holidays = append(parser.report.HolidaysRlg.Holidays, &newItem)
+			line = parser.splitLineWithHeader(cathRegex, line, &newItem.Descriptions)
 		case othersRegex.MatchString(line):
 			newItem := ReligiousHolidayDescr{}
-			parser.report.holidaysRlg.holidays = append(parser.report.holidaysRlg.holidays, &newItem)
-			line = parser.splitLineWithHeader(othersRegex, line, &newItem.descriptions)
+			parser.report.HolidaysRlg.Holidays = append(parser.report.HolidaysRlg.Holidays, &newItem)
+			line = parser.splitLineWithHeader(othersRegex, line, &newItem.Descriptions)
 		case bahaiRegex.MatchString(line):
-			newItem := ReligiousHolidayDescr{groupAbbr: "бахаи"}
-			parser.report.holidaysRlg.holidays = append(parser.report.holidaysRlg.holidays, &newItem)
-			line = parser.splitLineWithHeader(bahaiRegex, line, &newItem.descriptions)
+			newItem := ReligiousHolidayDescr{GroupAbbr: "бахаи"}
+			parser.report.HolidaysRlg.Holidays = append(parser.report.HolidaysRlg.Holidays, &newItem)
+			line = parser.splitLineWithHeader(bahaiRegex, line, &newItem.Descriptions)
 		case parser.currentArray == nil:
 			newItem := ReligiousHolidayDescr{}
-			parser.report.holidaysRlg.holidays = append(parser.report.holidaysRlg.holidays, &newItem)
-			parser.currentArray = &newItem.descriptions
+			parser.report.HolidaysRlg.Holidays = append(parser.report.HolidaysRlg.Holidays, &newItem)
+			parser.currentArray = &newItem.Descriptions
 		}
 		reApostle := regexp.MustCompile("память апостол.*")
 		reMemorial := regexp.MustCompile("^[Пп]амять .*")
@@ -137,7 +137,7 @@ func (parser *Parser) parseNamedays(line string) {
 		for _, l := range lines {
 			l = strings.TrimSpace(l)
 			if l != "" {
-				parser.report.nameDays = append(parser.report.nameDays, l)
+				parser.report.NameDays = append(parser.report.NameDays, l)
 			}
 		}
 		return
@@ -146,12 +146,12 @@ func (parser *Parser) parseNamedays(line string) {
 	if has := reAs.MatchString(line); has {
 		line = reAs.Split(line, 2)[0]
 	}
-	parser.report.nameDays = append(parser.report.nameDays, strings.TrimSpace(line))
+	parser.report.NameDays = append(parser.report.NameDays, strings.TrimSpace(line))
 }
 
 func (parser *Parser) parseOmens(line string) {
 	if parser.currentArray == nil {
-		parser.currentArray = &parser.report.omens
+		parser.currentArray = &parser.report.Omens
 	}
 
 	if len(*parser.currentArray) != 0 {

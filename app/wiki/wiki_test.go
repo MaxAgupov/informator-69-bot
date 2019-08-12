@@ -30,11 +30,26 @@ func TestGetCalendarInfoIssue(t *testing.T) {
 	}
 }
 
-func TestGetFileResult(t *testing.T) {
+func TestExtractReport(t *testing.T) {
 	var testFileName = "holidays_test.json"
 	holi := LoadHolidays(testFileName)
 	ExtractReport(&holi, time.January, 1)
 	//if report == nil {
 	//	t.Error("Wrong report")
 	//}
+}
+
+
+func TestGetResult(t *testing.T) {
+	var testFileName = "holidays_test.json"
+	holi := LoadHolidays(testFileName)
+
+	location, _ := time.LoadLocation(moscowLocation)
+	var date = time.Date(2018, time.January, 1, 1, 1, 1, 0, location)
+
+	report := GetReport(&holi, &date)
+
+	if report == "" {
+		t.Error("Wrong report")
+	}
 }

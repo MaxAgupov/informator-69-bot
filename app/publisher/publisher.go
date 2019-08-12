@@ -45,7 +45,7 @@ func NotifierFromFile(store *storage.ActiveChatsStore, holidays *wiki.Holidays, 
 	for {
 		timer := time.NewTimer(time.Until(nextNotif))
 		<-timer.C
-		report := wiki.GetReport(holidays)
+		report := wiki.GetNowReport(holidays)
 		store.RLock()
 		for _, chat := range store.Cache {
 			SendMessage(chat.Id, "Доброе утро", bot)

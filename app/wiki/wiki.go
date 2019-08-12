@@ -49,30 +49,30 @@ const moscowLocation = "Europe/Moscow"
 var reportCache = ReportCache{}
 
 type Report struct {
-	stats        string
-	common       []string
-	holidaysInt  []string
-	holidaysLoc  []string
-	holidaysProf []string
-	holidaysRlg  ReligiousHolidays
-	nameDays     []string
-	omens        []string
+	Stats        string
+	Common       []string
+	HolidaysInt  []string
+	HolidaysLoc  []string
+	HolidaysProf []string
+	HolidaysRlg  ReligiousHolidays
+	NameDays     []string
+	Omens        []string
 	//sections     map[string][]*Section
 }
 
 type ReligiousHolidayDescr struct {
-	descriptions []string
-	groupAbbr    string
+	Descriptions []string
+	GroupAbbr    string
 }
 
 type ReligiousHolidays struct {
-	holidays []*ReligiousHolidayDescr
+	Holidays []*ReligiousHolidayDescr
 }
 
 func (holidays *ReligiousHolidays) Empty() bool {
 	empty := true
-	for _, item := range holidays.holidays {
-		if len(item.descriptions) > 0 {
+	for _, item := range holidays.Holidays {
+		if len(item.Descriptions) > 0 {
 			empty = false
 		}
 	}
@@ -80,12 +80,12 @@ func (holidays *ReligiousHolidays) Empty() bool {
 }
 
 func (holidays *ReligiousHolidays) AppendString(formatted *string) {
-	if len(holidays.holidays) > 0 {
-		for _, items := range holidays.holidays {
-			for _, line := range items.descriptions {
+	if len(holidays.Holidays) > 0 {
+		for _, items := range holidays.Holidays {
+			for _, line := range items.Descriptions {
 				*formatted += "- " + line
-				if items.groupAbbr != "" {
-					*formatted += " (" + items.groupAbbr + ")"
+				if items.GroupAbbr != "" {
+					*formatted += " (" + items.GroupAbbr + ")"
 				}
 				*formatted += "\n"
 			}
@@ -100,40 +100,40 @@ func (holidays *ReligiousHolidays) AppendString(formatted *string) {
 
 func (report *Report) String() string {
 	formattedStr := ""
-	if report.stats != "" {
-		formattedStr += report.stats + "\n"
+	if report.Stats != "" {
+		formattedStr += report.Stats + "\n"
 	}
 
-	if len(report.holidaysInt) > 0 || len(report.holidaysLoc) > 0 || len(report.holidaysProf) > 0 || !report.holidaysRlg.Empty() {
+	if len(report.HolidaysInt) > 0 || len(report.HolidaysLoc) > 0 || len(report.HolidaysProf) > 0 || !report.HolidaysRlg.Empty() {
 		formattedStr += "*" + holidaysHeader + "*\n"
-		if len(report.holidaysInt) > 0 {
+		if len(report.HolidaysInt) > 0 {
 			formattedStr += "\n_" + intHolidaysSubheader + "_\n"
-			for _, line := range report.holidaysInt {
+			for _, line := range report.HolidaysInt {
 				formattedStr += "- " + line + "\n"
 			}
 		}
-		if len(report.holidaysLoc) > 0 {
+		if len(report.HolidaysLoc) > 0 {
 			formattedStr += "\n_" + locHolidaysSubheader + "_\n"
-			for _, line := range report.holidaysLoc {
+			for _, line := range report.HolidaysLoc {
 				formattedStr += "- " + line + "\n"
 			}
 		}
-		if len(report.holidaysProf) > 0 {
+		if len(report.HolidaysProf) > 0 {
 			formattedStr += "\n_" + profHolidaysSubheader + "_\n"
-			for _, line := range report.holidaysProf {
+			for _, line := range report.HolidaysProf {
 				formattedStr += "- " + line + "\n"
 			}
 		}
-		if !report.holidaysRlg.Empty() {
+		if !report.HolidaysRlg.Empty() {
 			formattedStr += "\n_" + rlgHolidaysSubheader + "_\n"
-			report.holidaysRlg.AppendString(&formattedStr)
+			report.HolidaysRlg.AppendString(&formattedStr)
 		}
 	}
 
-	if len(report.nameDays) > 0 {
+	if len(report.NameDays) > 0 {
 		formattedStr += "\n_" + nameDaysSubheader + "_"
 		append := false
-		for _, line := range report.nameDays {
+		for _, line := range report.NameDays {
 			if strings.Contains(line, ":") {
 				formattedStr += "\n- " + line
 				append = false
@@ -149,9 +149,9 @@ func (report *Report) String() string {
 		formattedStr += "\n"
 	}
 
-	if l := len(report.omens); l > 0 {
+	if l := len(report.Omens); l > 0 {
 		formattedStr += "\n*" + "Приметы" + "*\n\n"
-		for i, line := range report.omens {
+		for i, line := range report.Omens {
 			if i > 0 && i < 5 {
 				formattedStr += line + "\n"
 			} else if i == 0 {
@@ -165,7 +165,7 @@ func (report *Report) String() string {
 }
 
 func (report *Report) setCalendarInfo(day *time.Time) {
-	report.stats = GenerateCalendarStats(day)
+	report.Stats = GenerateCalendarStats(day)
 }
 
 type Response struct {
@@ -230,16 +230,20 @@ func GetTodaysReport() string {
 	return report.String()
 }
 
-func GetReport(holidays *Holidays) string {
+func GetNowReport(holidays *Holidays) string {
 	location, _ := time.LoadLocation(moscowLocation)
 	log.Print(location)
 	today := time.Now().In(location)
 
-	var report = ExtractReport(holidays, today.Month(), today.Day())
+	return GetReport(holidays, &today)
+}
 
-	report.setCalendarInfo(&today)
+func GetReport(holidays *Holidays, report_date *time.Time) string {
+	var report = ExtractReport(holidays, report_date.Month(), report_date.Day())
+	report.setCalendarInfo(report_date)
 	return report.String()
 }
+
 
 func ExtractReport(holidays *Holidays, month time.Month, day int) Report {
 	log.Println("Extract info", month, day)
