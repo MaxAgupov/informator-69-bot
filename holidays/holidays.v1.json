@@ -4,7 +4,7 @@
    "month": "January",
    "day": "1",
    "report": {
-    "Stats": "*Вторник, 1 января 2019 года*\n1-й день года. До конца года 364 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Новый год по григорианскому календарю",
@@ -48,7 +48,7 @@
    "month": "January",
    "day": "10",
    "report": {
-    "Stats": "*Четверг, 10 января 2019 года*\n10-й день года. До конца года 355 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Таиланд — День детей",
@@ -81,7 +81,7 @@
    "month": "January",
    "day": "11",
    "report": {
-    "Stats": "*Пятница, 11 января 2019 года*\n11-й день года. До конца года 354 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -111,7 +111,7 @@
    "month": "January",
    "day": "12",
    "report": {
-    "Stats": "*Суббота, 12 января 2019 года*\n12-й день года. До конца года 353 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": null,
@@ -150,7 +150,7 @@
    "month": "January",
    "day": "13",
    "report": {
-    "Stats": "*Воскресенье, 13 января 2019 года*\n13-й день года. До конца года 352 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -185,7 +185,7 @@
    "month": "January",
    "day": "14",
    "report": {
-    "Stats": "*Понедельник, 14 января 2019 года*\n14-й день года. До конца года 351 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Старый Новый год — Новый год по юлианскому календарю. Традиционно отмечается в странах, церкви которых отмечают Рождество по юлианскому календарю (7 января)"
@@ -238,7 +238,7 @@
    "month": "January",
    "day": "15",
    "report": {
-    "Stats": "*Вторник, 15 января 2019 года*\n15-й день года. До конца года 350 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -285,7 +285,7 @@
    "month": "January",
    "day": "16",
    "report": {
-    "Stats": "*Среда, 16 января 2019 года*\n16-й день года. До конца года 349 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": null,
@@ -319,7 +319,7 @@
    "month": "January",
    "day": "17",
    "report": {
-    "Stats": "*Четверг, 17 января 2019 года*\n17-й день года. До конца года 348 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": null,
@@ -356,7 +356,7 @@
    "month": "January",
    "day": "18",
    "report": {
-    "Stats": "*Пятница, 18 января 2019 года*\n18-й день года. До конца года 347 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": null,
@@ -396,7 +396,7 @@
    "month": "January",
    "day": "19",
    "report": {
-    "Stats": "*Суббота, 19 января 2019 года*\n19-й день года. До конца года 346 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -456,7 +456,7 @@
    "month": "January",
    "day": "2",
    "report": {
-    "Stats": "*Среда, 2 января 2019 года*\n2-й день года. До конца года 363 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -500,7 +500,7 @@
    "month": "January",
    "day": "20",
    "report": {
-    "Stats": "*Воскресенье, 20 января 2019 года*\n20-й день года. До конца года 345 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -545,7 +545,7 @@
    "month": "January",
    "day": "21",
    "report": {
-    "Stats": "*Понедельник, 21 января 2019 года*\n21-й день года. До конца года 344 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -588,7 +588,7 @@
    "month": "January",
    "day": "22",
    "report": {
-    "Stats": "*Вторник, 22 января 2019 года*\n22-й день года. До конца года 343 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -626,7 +626,7 @@
    "month": "January",
    "day": "23",
    "report": {
-    "Stats": "*Среда, 23 января 2019 года*\n23-й день года. До конца года 342 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -663,7 +663,7 @@
    "month": "January",
    "day": "24",
    "report": {
-    "Stats": "*Четверг, 24 января 2019 года*\n24-й день года. До конца года 341 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -700,7 +700,7 @@
    "month": "January",
    "day": "25",
    "report": {
-    "Stats": "*Пятница, 25 января 2019 года*\n25-й день года. До конца года 340 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": null,
@@ -742,7 +742,7 @@
    "month": "January",
    "day": "26",
    "report": {
-    "Stats": "*Суббота, 26 января 2019 года*\n26-й день года. До конца года 339 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день таможенника"
@@ -789,7 +789,7 @@
    "month": "January",
    "day": "27",
    "report": {
-    "Stats": "*Воскресенье, 27 января 2019 года*\n27-й день года. До конца года 338 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день памяти жертв Холокоста"
@@ -834,7 +834,7 @@
    "month": "January",
    "day": "28",
    "report": {
-    "Stats": "*Понедельник, 28 января 2019 года*\n28-й день года. До конца года 337 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -883,7 +883,7 @@
    "month": "January",
    "day": "29",
    "report": {
-    "Stats": "*Вторник, 29 января 2019 года*\n29-й день года. До конца года 336 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": null,
@@ -921,7 +921,7 @@
    "month": "January",
    "day": "3",
    "report": {
-    "Stats": "*Четверг, 3 января 2019 года*\n3-й день года. До конца года 362 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": null,
@@ -956,7 +956,7 @@
    "month": "January",
    "day": "30",
    "report": {
-    "Stats": "*Среда, 30 января 2019 года*\n30-й день года. До конца года 335 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -1004,7 +1004,7 @@
    "month": "January",
    "day": "31",
    "report": {
-    "Stats": "*Четверг, 31 января 2019 года*\n31-й день года. До конца года 334 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -1044,7 +1044,7 @@
    "month": "January",
    "day": "4",
    "report": {
-    "Stats": "*Пятница, 4 января 2019 года*\n4-й день года. До конца года 361 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -1081,7 +1081,7 @@
    "month": "January",
    "day": "5",
    "report": {
-    "Stats": "*Суббота, 5 января 2019 года*\n5-й день года. До конца года 360 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -1121,7 +1121,7 @@
    "month": "January",
    "day": "6",
    "report": {
-    "Stats": "*Воскресенье, 6 января 2019 года*\n6-й день года. До конца года 359 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -1164,7 +1164,7 @@
    "month": "January",
    "day": "7",
    "report": {
-    "Stats": "*Понедельник, 7 января 2019 года*\n7-й день года. До конца года 358 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -1195,7 +1195,7 @@
    "month": "January",
    "day": "8",
    "report": {
-    "Stats": "*Вторник, 8 января 2019 года*\n8-й день года. До конца года 357 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": null,
@@ -1238,7 +1238,7 @@
    "month": "January",
    "day": "9",
    "report": {
-    "Stats": "*Среда, 9 января 2019 года*\n9-й день года. До конца года 356 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -1281,7 +1281,7 @@
    "month": "October",
    "day": "1",
    "report": {
-    "Stats": "*Вторник, 1 октября 2019 года*\n274-й день года. До конца года 91 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день пожилых людей",
@@ -1353,7 +1353,7 @@
    "month": "October",
    "day": "10",
    "report": {
-    "Stats": "*Четверг, 10 октября 2019 года*\n283-й день года. До конца года 82 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — Всемирный день психического здоровья",
@@ -1390,7 +1390,7 @@
    "month": "October",
    "day": "11",
    "report": {
-    "Stats": "*Пятница, 11 октября 2019 года*\n284-й день года. До конца года 81 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — Международный день девочек"
@@ -1423,7 +1423,7 @@
    "month": "October",
    "day": "12",
    "report": {
-    "Stats": "*Суббота, 12 октября 2019 года*\n285-й день года. До конца года 80 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "День испанского языка"
@@ -1464,7 +1464,7 @@
    "month": "October",
    "day": "13",
    "report": {
-    "Stats": "*Воскресенье, 13 октября 2019 года*\n286-й день года. До конца года 79 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — Международный день по уменьшению опасности бедствий"
@@ -1495,7 +1495,7 @@
    "month": "October",
    "day": "14",
    "report": {
-    "Stats": "*Понедельник, 14 октября 2019 года*\n287-й день года. До конца года 78 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день стандартов"
@@ -1545,7 +1545,7 @@
    "month": "October",
    "day": "15",
    "report": {
-    "Stats": "*Вторник, 15 октября 2019 года*\n288-й день года. До конца года 77 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день сельских женщин",
@@ -1578,7 +1578,7 @@
    "month": "October",
    "day": "16",
    "report": {
-    "Stats": "*Среда, 16 октября 2019 года*\n289-й день года. До конца года 76 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день продовольствия",
@@ -1618,7 +1618,7 @@
    "month": "October",
    "day": "17",
    "report": {
-    "Stats": "*Четверг, 17 октября 2019 года*\n290-й день года. До конца года 75 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день борьбы за ликвидацию нищеты"
@@ -1648,7 +1648,7 @@
    "month": "October",
    "day": "18",
    "report": {
-    "Stats": "*Пятница, 18 октября 2019 года*\n291-й день года. До конца года 74 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -1679,7 +1679,7 @@
    "month": "October",
    "day": "19",
    "report": {
-    "Stats": "*Суббота, 19 октября 2019 года*\n292-й день года. До конца года 73 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -1713,7 +1713,7 @@
    "month": "October",
    "day": "2",
    "report": {
-    "Stats": "*Среда, 2 октября 2019 года*\n275-й день года. До конца года 90 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день ненасилия",
@@ -1744,7 +1744,7 @@
    "month": "October",
    "day": "20",
    "report": {
-    "Stats": "*Воскресенье, 20 октября 2019 года*\n293-й день года. До конца года 72 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день статистики — отмечается один раз в пять лет по решению статистической комиссии ООН с 2010 года. Праздничные годы 2010, 2015, 2020, 2025 и т. д",
@@ -1791,7 +1791,7 @@
    "month": "October",
    "day": "21",
    "report": {
-    "Stats": "*Понедельник, 21 октября 2019 года*\n294-й день года. До конца года 71 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -1832,7 +1832,7 @@
    "month": "October",
    "day": "22",
    "report": {
-    "Stats": "*Вторник, 22 октября 2019 года*\n295-й день года. До конца года 70 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день заикающихся людей"
@@ -1870,7 +1870,7 @@
    "month": "October",
    "day": "23",
    "report": {
-    "Stats": "*Среда, 23 октября 2019 года*\n296-й день года. До конца года 69 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -1913,7 +1913,7 @@
    "month": "October",
    "day": "24",
    "report": {
-    "Stats": "*Четверг, 24 октября 2019 года*\n297-й день года. До конца года 68 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН:",
@@ -1960,7 +1960,7 @@
    "month": "October",
    "day": "25",
    "report": {
-    "Stats": "*Пятница, 25 октября 2019 года*\n298-й день года. До конца года 67 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -2008,7 +2008,7 @@
    "month": "October",
    "day": "26",
    "report": {
-    "Stats": "*Суббота, 26 октября 2019 года*\n299-й день года. До конца года 66 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -2049,7 +2049,7 @@
    "month": "October",
    "day": "27",
    "report": {
-    "Stats": "*Воскресенье, 27 октября 2019 года*\n300-й день года. До конца года 65 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ЮНЕСКО — Всемирный день аудиовизуального наследия"
@@ -2089,7 +2089,7 @@
    "month": "October",
    "day": "28",
    "report": {
-    "Stats": "*Понедельник, 28 октября 2019 года*\n301-й день года. До конца года 64 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день анимации"
@@ -2125,7 +2125,7 @@
    "month": "October",
    "day": "29",
    "report": {
-    "Stats": "*Вторник, 29 октября 2019 года*\n302-й день года. До конца года 63 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день борьбы с инсультом"
@@ -2160,7 +2160,7 @@
    "month": "October",
    "day": "3",
    "report": {
-    "Stats": "*Четверг, 3 октября 2019 года*\n276-й день года. До конца года 89 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -2192,7 +2192,7 @@
    "month": "October",
    "day": "30",
    "report": {
-    "Stats": "*Среда, 30 октября 2019 года*\n303-й день года. До конца года 62 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -2229,7 +2229,7 @@
    "month": "October",
    "day": "31",
    "report": {
-    "Stats": "*Четверг, 31 октября 2019 года*\n304-й день года. До конца года 61 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Хэллоуин — ночь накануне «Дня всех святых»"
@@ -2273,7 +2273,7 @@
    "month": "October",
    "day": "4",
    "report": {
-    "Stats": "*Пятница, 4 октября 2019 года*\n277-й день года. До конца года 88 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "День защиты животных"
@@ -2311,7 +2311,7 @@
    "month": "October",
    "day": "5",
    "report": {
-    "Stats": "*Суббота, 5 октября 2019 года*\n278-й день года. До конца года 87 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день учителей"
@@ -2353,7 +2353,7 @@
    "month": "October",
    "day": "6",
    "report": {
-    "Stats": "*Воскресенье, 6 октября 2019 года*\n279-й день года. До конца года 86 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день охраны мест обитаний"
@@ -2395,7 +2395,7 @@
    "month": "October",
    "day": "7",
    "report": {
-    "Stats": "*Понедельник, 7 октября 2019 года*\n280-й день года. До конца года 85 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -2435,7 +2435,7 @@
    "month": "October",
    "day": "8",
    "report": {
-    "Stats": "*Вторник, 8 октября 2019 года*\n281-й день года. До конца года 84 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -2478,7 +2478,7 @@
    "month": "October",
    "day": "9",
    "report": {
-    "Stats": "*Среда, 9 октября 2019 года*\n282-й день года. До конца года 83 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день почты"
@@ -2520,7 +2520,7 @@
    "month": "November",
    "day": "1",
    "report": {
-    "Stats": "*Пятница, 1 ноября 2019 года*\n305-й день года. До конца года 60 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день вегана"
@@ -2563,7 +2563,7 @@
    "month": "November",
    "day": "10",
    "report": {
-    "Stats": "*Воскресенье, 10 ноября 2019 года*\n314-й день года. До конца года 51 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день молодежи",
@@ -2604,7 +2604,7 @@
    "month": "November",
    "day": "11",
    "report": {
-    "Stats": "*Понедельник, 11 ноября 2019 года*\n315-й день года. До конца года 50 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -2640,7 +2640,7 @@
    "month": "November",
    "day": "12",
    "report": {
-    "Stats": "*Вторник, 12 ноября 2019 года*\n316-й день года. До конца года 49 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -2680,7 +2680,7 @@
    "month": "November",
    "day": "13",
    "report": {
-    "Stats": "*Среда, 13 ноября 2019 года*\n317-й день года. До конца года 48 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день слепых"
@@ -2716,7 +2716,7 @@
    "month": "November",
    "day": "14",
    "report": {
-    "Stats": "*Четверг, 14 ноября 2019 года*\n318-й день года. До конца года 47 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день борьбы с диабетом"
@@ -2759,7 +2759,7 @@
    "month": "November",
    "day": "15",
    "report": {
-    "Stats": "*Пятница, 15 ноября 2019 года*\n319-й день года. До конца года 46 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -2792,7 +2792,7 @@
    "month": "November",
    "day": "16",
    "report": {
-    "Stats": "*Суббота, 16 ноября 2019 года*\n320-й день года. До конца года 45 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день толерантности",
@@ -2823,7 +2823,7 @@
    "month": "November",
    "day": "17",
    "report": {
-    "Stats": "*Воскресенье, 17 ноября 2019 года*\n321-й день года. До конца года 44 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день студентов (с 1941)",
@@ -2857,7 +2857,7 @@
    "month": "November",
    "day": "18",
    "report": {
-    "Stats": "*Понедельник, 18 ноября 2019 года*\n322-й день года. До конца года 43 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -2886,7 +2886,7 @@
    "month": "November",
    "day": "19",
    "report": {
-    "Stats": "*Вторник, 19 ноября 2019 года*\n323-й день года. До конца года 42 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — Международный мужской день",
@@ -2925,7 +2925,7 @@
    "month": "November",
    "day": "2",
    "report": {
-    "Stats": "*Суббота, 2 ноября 2019 года*\n306-й день года. До конца года 59 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -2962,7 +2962,7 @@
    "month": "November",
    "day": "20",
    "report": {
-    "Stats": "*Среда, 20 ноября 2019 года*\n324-й день года. До конца года 41 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — День индустриализации Африки",
@@ -3007,7 +3007,7 @@
    "month": "November",
    "day": "21",
    "report": {
-    "Stats": "*Четверг, 21 ноября 2019 года*\n325-й день года. До конца года 40 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — Всемирный день телевидения",
@@ -3051,7 +3051,7 @@
    "month": "November",
    "day": "22",
    "report": {
-    "Stats": "*Пятница, 22 ноября 2019 года*\n326-й день года. До конца года 39 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -3087,7 +3087,7 @@
    "month": "November",
    "day": "23",
    "report": {
-    "Stats": "*Суббота, 23 ноября 2019 года*\n327-й день года. До конца года 38 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -3123,7 +3123,7 @@
    "month": "November",
    "day": "24",
    "report": {
-    "Stats": "*Воскресенье, 24 ноября 2019 года*\n328-й день года. До конца года 37 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Страны Арктики — День моржа"
@@ -3163,7 +3163,7 @@
    "month": "November",
    "day": "25",
    "report": {
-    "Stats": "*Понедельник, 25 ноября 2019 года*\n329-й день года. До конца года 36 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день борьбы за ликвидацию насилия в отношении женщин"
@@ -3203,7 +3203,7 @@
    "month": "November",
    "day": "26",
    "report": {
-    "Stats": "*Вторник, 26 ноября 2019 года*\n330-й день года. До конца года 35 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "День переворачивания мира — шутливый праздник, когда совершают действия и оглашают теории, противоположные обычным"
@@ -3234,7 +3234,7 @@
    "month": "November",
    "day": "27",
    "report": {
-    "Stats": "*Среда, 27 ноября 2019 года*\n331-й день года. До конца года 34 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": null,
@@ -3273,7 +3273,7 @@
    "month": "November",
    "day": "28",
    "report": {
-    "Stats": "*Четверг, 28 ноября 2019 года*\n332-й день года. До конца года 33 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -3315,7 +3315,7 @@
    "month": "November",
    "day": "29",
    "report": {
-    "Stats": "*Пятница, 29 ноября 2019 года*\n333-й день года. До конца года 32 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — Международный день солидарности с палестинским народом"
@@ -3346,7 +3346,7 @@
    "month": "November",
    "day": "3",
    "report": {
-    "Stats": "*Воскресенье, 3 ноября 2019 года*\n307-й день года. До конца года 58 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -3380,7 +3380,7 @@
    "month": "November",
    "day": "30",
    "report": {
-    "Stats": "*Суббота, 30 ноября 2019 года*\n334-й день года. До конца года 31 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день защиты информации"
@@ -3412,7 +3412,7 @@
    "month": "November",
    "day": "4",
    "report": {
-    "Stats": "*Понедельник, 4 ноября 2019 года*\n308-й день года. До конца года 57 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -3455,7 +3455,7 @@
    "month": "November",
    "day": "5",
    "report": {
-    "Stats": "*Вторник, 5 ноября 2019 года*\n309-й день года. До конца года 56 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — Всемирный день распространения информации о проблеме цунами"
@@ -3496,7 +3496,7 @@
    "month": "November",
    "day": "6",
    "report": {
-    "Stats": "*Среда, 6 ноября 2019 года*\n310-й день года. До конца года 55 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день предотвращения эксплуатации окружающей среды во время войны и вооружённых конфликтов",
@@ -3537,7 +3537,7 @@
    "month": "November",
    "day": "7",
    "report": {
-    "Stats": "*Четверг, 7 ноября 2019 года*\n311-й день года. До конца года 54 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "День Великой Октябрьской социалистической революции"
@@ -3569,7 +3569,7 @@
    "month": "November",
    "day": "8",
    "report": {
-    "Stats": "*Пятница, 8 ноября 2019 года*\n312-й день года. До конца года 53 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день КВН",
@@ -3617,7 +3617,7 @@
    "month": "November",
    "day": "9",
    "report": {
-    "Stats": "*Суббота, 9 ноября 2019 года*\n313-й день года. До конца года 52 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -3654,7 +3654,7 @@
    "month": "December",
    "day": "1",
    "report": {
-    "Stats": "*Воскресенье, 1 декабря 2019 года*\n335-й день года. До конца года 30 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — Всемирный день борьбы со СПИДом"
@@ -3692,7 +3692,7 @@
    "month": "December",
    "day": "10",
    "report": {
-    "Stats": "*Вторник, 10 декабря 2019 года*\n344-й день года. До конца года 21 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "День прав человека",
@@ -3739,7 +3739,7 @@
    "month": "December",
    "day": "11",
    "report": {
-    "Stats": "*Среда, 11 декабря 2019 года*\n345-й день года. До конца года 20 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день гор"
@@ -3773,7 +3773,7 @@
    "month": "December",
    "day": "12",
    "report": {
-    "Stats": "*Четверг, 12 декабря 2019 года*\n346-й день года. До конца года 19 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -3809,7 +3809,7 @@
    "month": "December",
    "day": "13",
    "report": {
-    "Stats": "*Пятница, 13 декабря 2019 года*\n347-й день года. До конца года 18 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -3850,7 +3850,7 @@
    "month": "December",
    "day": "14",
    "report": {
-    "Stats": "*Суббота, 14 декабря 2019 года*\n348-й день года. До конца года 17 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -3880,7 +3880,7 @@
    "month": "December",
    "day": "15",
    "report": {
-    "Stats": "*Воскресенье, 15 декабря 2019 года*\n349-й день года. До конца года 16 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день чая",
@@ -3915,7 +3915,7 @@
    "month": "December",
    "day": "16",
    "report": {
-    "Stats": "*Понедельник, 16 декабря 2019 года*\n350-й день года. До конца года 15 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -3949,7 +3949,7 @@
    "month": "December",
    "day": "17",
    "report": {
-    "Stats": "*Вторник, 17 декабря 2019 года*\n351-й день года. До конца года 14 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день защиты секс-работниц от насилия и жестокости"
@@ -3997,7 +3997,7 @@
    "month": "December",
    "day": "18",
    "report": {
-    "Stats": "*Среда, 18 декабря 2019 года*\n352-й день года. До конца года 13 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день мигранта",
@@ -4038,7 +4038,7 @@
    "month": "December",
    "day": "19",
    "report": {
-    "Stats": "*Четверг, 19 декабря 2019 года*\n353-й день года. До конца года 12 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": null,
@@ -4064,7 +4064,7 @@
    "month": "December",
    "day": "2",
    "report": {
-    "Stats": "*Понедельник, 2 декабря 2019 года*\n336-й день года. До конца года 29 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день борьбы за отмену рабства"
@@ -4103,7 +4103,7 @@
    "month": "December",
    "day": "20",
    "report": {
-    "Stats": "*Пятница, 20 декабря 2019 года*\n354-й день года. До конца года 11 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день солидарности людей"
@@ -4140,7 +4140,7 @@
    "month": "December",
    "day": "21",
    "report": {
-    "Stats": "*Суббота, 21 декабря 2019 года*\n355-й день года. До конца года 10 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": null,
@@ -4184,7 +4184,7 @@
    "month": "December",
    "day": "22",
    "report": {
-    "Stats": "*Воскресенье, 22 декабря 2019 года*\n356-й день года. До конца года 9 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": null,
@@ -4219,7 +4219,7 @@
    "month": "December",
    "day": "23",
    "report": {
-    "Stats": "*Понедельник, 23 декабря 2019 года*\n357-й день года. До конца года 8 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -4247,7 +4247,7 @@
    "month": "December",
    "day": "24",
    "report": {
-    "Stats": "*Вторник, 24 декабря 2019 года*\n358-й день года. До конца года 7 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -4288,7 +4288,7 @@
    "month": "December",
    "day": "25",
    "report": {
-    "Stats": "*Среда, 25 декабря 2019 года*\n359-й день года. До конца года 6 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -4369,7 +4369,7 @@
    "month": "December",
    "day": "26",
    "report": {
-    "Stats": "*Четверг, 26 декабря 2019 года*\n360-й день года. До конца года 5 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -4410,7 +4410,7 @@
    "month": "December",
    "day": "27",
    "report": {
-    "Stats": "*Пятница, 27 декабря 2019 года*\n361-й день года. До конца года 4 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": null,
@@ -4447,7 +4447,7 @@
    "month": "December",
    "day": "28",
    "report": {
-    "Stats": "*Суббота, 28 декабря 2019 года*\n362-й день года. До конца года 3 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день кино"
@@ -4490,7 +4490,7 @@
    "month": "December",
    "day": "29",
    "report": {
-    "Stats": "*Воскресенье, 29 декабря 2019 года*\n363-й день года. До конца года 2 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -4518,7 +4518,7 @@
    "month": "December",
    "day": "3",
    "report": {
-    "Stats": "*Вторник, 3 декабря 2019 года*\n337-й день года. До конца года 28 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день инвалидов",
@@ -4555,7 +4555,7 @@
    "month": "December",
    "day": "30",
    "report": {
-    "Stats": "*Понедельник, 30 декабря 2019 года*\n364-й день года. До конца года 1 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -4585,7 +4585,7 @@
    "month": "December",
    "day": "31",
    "report": {
-    "Stats": "*Вторник, 31 декабря 2019 года*\nЗавтра уже Новый Год!\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Канун Нового года"
@@ -4623,7 +4623,7 @@
    "month": "December",
    "day": "4",
    "report": {
-    "Stats": "*Среда, 4 декабря 2019 года*\n338-й день года. До конца года 27 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -4669,7 +4669,7 @@
    "month": "December",
    "day": "5",
    "report": {
-    "Stats": "*Четверг, 5 декабря 2019 года*\n339-й день года. До конца года 26 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — Международный день добровольцев во имя экономического и социального развития"
@@ -4710,7 +4710,7 @@
    "month": "December",
    "day": "6",
    "report": {
-    "Stats": "*Пятница, 6 декабря 2019 года*\n340-й день года. До конца года 25 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -4752,7 +4752,7 @@
    "month": "December",
    "day": "7",
    "report": {
-    "Stats": "*Суббота, 7 декабря 2019 года*\n341-й день года. До конца года 24 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день гражданской авиации"
@@ -4791,7 +4791,7 @@
    "month": "December",
    "day": "8",
    "report": {
-    "Stats": "*Воскресенье, 8 декабря 2019 года*\n342-й день года. До конца года 23 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -4835,7 +4835,7 @@
    "month": "December",
    "day": "9",
    "report": {
-    "Stats": "*Понедельник, 9 декабря 2019 года*\n343-й день года. До конца года 22 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день борьбы с коррупцией"
@@ -4878,7 +4878,7 @@
    "month": "February",
    "day": "1",
    "report": {
-    "Stats": "*Пятница, 1 февраля 2019 года*\n32-й день года. До конца года 333 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -4924,7 +4924,7 @@
    "month": "February",
    "day": "10",
    "report": {
-    "Stats": "*Воскресенье, 10 февраля 2019 года*\n41-й день года. До конца года 324 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -4965,7 +4965,7 @@
    "month": "February",
    "day": "11",
    "report": {
-    "Stats": "*Понедельник, 11 февраля 2019 года*\n42-й день года. До конца года 323 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день больного"
@@ -5014,7 +5014,7 @@
    "month": "February",
    "day": "12",
    "report": {
-    "Stats": "*Вторник, 12 февраля 2019 года*\n43-й день года. До конца года 322 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — День Дарвина",
@@ -5066,7 +5066,7 @@
    "month": "February",
    "day": "13",
    "report": {
-    "Stats": "*Среда, 13 февраля 2019 года*\n44-й день года. До конца года 321 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — Всемирный день радио",
@@ -5106,7 +5106,7 @@
    "month": "February",
    "day": "14",
    "report": {
-    "Stats": "*Четверг, 14 февраля 2019 года*\n45-й день года. До конца года 320 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "День всех влюблённых"
@@ -5159,7 +5159,7 @@
    "month": "February",
    "day": "15",
    "report": {
-    "Stats": "*Пятница, 15 февраля 2019 года*\n46-й день года. До конца года 319 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день детей, больных раком"
@@ -5221,7 +5221,7 @@
    "month": "February",
    "day": "16",
    "report": {
-    "Stats": "*Суббота, 16 февраля 2019 года*\n47-й день года. До конца года 318 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -5264,7 +5264,7 @@
    "month": "February",
    "day": "17",
    "report": {
-    "Stats": "*Воскресенье, 17 февраля 2019 года*\n48-й день года. До конца года 317 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -5301,7 +5301,7 @@
    "month": "February",
    "day": "18",
    "report": {
-    "Stats": "*Понедельник, 18 февраля 2019 года*\n49-й день года. До конца года 316 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": null,
@@ -5339,7 +5339,7 @@
    "month": "February",
    "day": "19",
    "report": {
-    "Stats": "*Вторник, 19 февраля 2019 года*\n50-й день года. До конца года 315 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день китов"
@@ -5379,7 +5379,7 @@
    "month": "February",
    "day": "2",
    "report": {
-    "Stats": "*Суббота, 2 февраля 2019 года*\n33-й день года. До конца года 332 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день водно-болотных угодий"
@@ -5423,7 +5423,7 @@
    "month": "February",
    "day": "20",
    "report": {
-    "Stats": "*Среда, 20 февраля 2019 года*\n51-й день года. До конца года 314 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день социальной справедливости"
@@ -5460,7 +5460,7 @@
    "month": "February",
    "day": "21",
    "report": {
-    "Stats": "*Четверг, 21 февраля 2019 года*\n52-й день года. До конца года 313 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ЮНЕСКО — Международный день родного языка"
@@ -5503,7 +5503,7 @@
    "month": "February",
    "day": "22",
    "report": {
-    "Stats": "*Пятница, 22 февраля 2019 года*\n53-й день года. До конца года 312 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день поддержки жертв преступлений"
@@ -5552,7 +5552,7 @@
    "month": "February",
    "day": "23",
    "report": {
-    "Stats": "*Суббота, 23 февраля 2019 года*\n54-й день года. До конца года 311 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -5591,7 +5591,7 @@
    "month": "February",
    "day": "24",
    "report": {
-    "Stats": "*Воскресенье, 24 февраля 2019 года*\n55-й день года. До конца года 310 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -5629,7 +5629,7 @@
    "month": "February",
    "day": "25",
    "report": {
-    "Stats": "*Понедельник, 25 февраля 2019 года*\n56-й день года. До конца года 309 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -5667,7 +5667,7 @@
    "month": "February",
    "day": "26",
    "report": {
-    "Stats": "*Вторник, 26 февраля 2019 года*\n57-й день года. До конца года 308 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -5706,7 +5706,7 @@
    "month": "February",
    "day": "27",
    "report": {
-    "Stats": "*Среда, 27 февраля 2019 года*\n58-й день года. До конца года 307 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день неправительственных организаций",
@@ -5749,7 +5749,7 @@
    "month": "February",
    "day": "28",
    "report": {
-    "Stats": "*Четверг, 28 февраля 2019 года*\n59-й день года. До конца года 306 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -5789,7 +5789,7 @@
    "month": "February",
    "day": "29",
    "report": {
-    "Stats": "*Пятница, 1 марта 2019 года*\n60-й день года. До конца года 305 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "В дискордианизме — день св. Тиба",
@@ -5827,7 +5827,7 @@
    "month": "February",
    "day": "3",
    "report": {
-    "Stats": "*Воскресенье, 3 февраля 2019 года*\n34-й день года. До конца года 331 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -5862,7 +5862,7 @@
    "month": "February",
    "day": "4",
    "report": {
-    "Stats": "*Понедельник, 4 февраля 2019 года*\n35-й день года. До конца года 330 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день борьбы против рака"
@@ -5903,7 +5903,7 @@
    "month": "February",
    "day": "5",
    "report": {
-    "Stats": "*Вторник, 5 февраля 2019 года*\n36-й день года. До конца года 329 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -5952,7 +5952,7 @@
    "month": "February",
    "day": "6",
    "report": {
-    "Stats": "*Среда, 6 февраля 2019 года*\n37-й день года. До конца года 328 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — Международный день борьбы с женским обрезанием",
@@ -6007,7 +6007,7 @@
    "month": "February",
    "day": "7",
    "report": {
-    "Stats": "*Четверг, 7 февраля 2019 года*\n38-й день года. До конца года 327 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -6048,7 +6048,7 @@
    "month": "February",
    "day": "8",
    "report": {
-    "Stats": "*Пятница, 8 февраля 2019 года*\n39-й день года. До конца года 326 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -6105,7 +6105,7 @@
    "month": "February",
    "day": "9",
    "report": {
-    "Stats": "*Суббота, 9 февраля 2019 года*\n40-й день года. До конца года 325 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день стоматолога"
@@ -6141,7 +6141,7 @@
    "month": "March",
    "day": "1",
    "report": {
-    "Stats": "*Пятница, 1 марта 2019 года*\n60-й день года. До конца года 305 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день гражданской обороны"
@@ -6199,7 +6199,7 @@
    "month": "March",
    "day": "10",
    "report": {
-    "Stats": "*Воскресенье, 10 марта 2019 года*\n69-й день года. До конца года 296 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -6241,7 +6241,7 @@
    "month": "March",
    "day": "11",
    "report": {
-    "Stats": "*Понедельник, 11 марта 2019 года*\n70-й день года. До конца года 295 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -6280,7 +6280,7 @@
    "month": "March",
    "day": "12",
    "report": {
-    "Stats": "*Вторник, 12 марта 2019 года*\n71-й день года. До конца года 294 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -6325,7 +6325,7 @@
    "month": "March",
    "day": "13",
    "report": {
-    "Stats": "*Среда, 13 марта 2019 года*\n72-й день года. До конца года 293 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -6367,7 +6367,7 @@
    "month": "March",
    "day": "14",
    "report": {
-    "Stats": "*Четверг, 14 марта 2019 года*\n73-й день года. До конца года 292 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "День действий в защиту рек, воды и жизни",
@@ -6419,7 +6419,7 @@
    "month": "March",
    "day": "15",
    "report": {
-    "Stats": "*Пятница, 15 марта 2019 года*\n74-й день года. До конца года 291 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день защиты прав потребителей",
@@ -6463,7 +6463,7 @@
    "month": "March",
    "day": "16",
    "report": {
-    "Stats": "*Суббота, 16 марта 2019 года*\n75-й день года. До конца года 290 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -6503,7 +6503,7 @@
    "month": "March",
    "day": "17",
    "report": {
-    "Stats": "*Воскресенье, 17 марта 2019 года*\n76-й день года. До конца года 289 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -6555,7 +6555,7 @@
    "month": "March",
    "day": "18",
    "report": {
-    "Stats": "*Понедельник, 18 марта 2019 года*\n77-й день года. До конца года 288 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "День Парижской коммуны"
@@ -6601,7 +6601,7 @@
    "month": "March",
    "day": "19",
    "report": {
-    "Stats": "*Вторник, 19 марта 2019 года*\n78-й день года. До конца года 287 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -6642,7 +6642,7 @@
    "month": "March",
    "day": "2",
    "report": {
-    "Stats": "*Суббота, 2 марта 2019 года*\n61-й день года. До конца года 304 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -6690,7 +6690,7 @@
    "month": "March",
    "day": "20",
    "report": {
-    "Stats": "*Среда, 20 марта 2019 года*\n79-й день года. До конца года 286 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день Франкофонии — всех говорящих на французском языке",
@@ -6736,7 +6736,7 @@
    "month": "March",
    "day": "21",
    "report": {
-    "Stats": "*Четверг, 21 марта 2019 года*\n80-й день года. До конца года 285 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день поэзии",
@@ -6789,7 +6789,7 @@
    "month": "March",
    "day": "22",
    "report": {
-    "Stats": "*Пятница, 22 марта 2019 года*\n81-й день года. До конца года 284 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН, Всемирный день водных ресурсов",
@@ -6846,7 +6846,7 @@
    "month": "March",
    "day": "23",
    "report": {
-    "Stats": "*Суббота, 23 марта 2019 года*\n82-й день года. До конца года 283 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — Всемирный метеорологический день"
@@ -6885,7 +6885,7 @@
    "month": "March",
    "day": "24",
    "report": {
-    "Stats": "*Воскресенье, 24 марта 2019 года*\n83-й день года. До конца года 282 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — Всемирный день борьбы против туберкулёза"
@@ -6928,7 +6928,7 @@
    "month": "March",
    "day": "25",
    "report": {
-    "Stats": "*Понедельник, 25 марта 2019 года*\n84-й день года. До конца года 281 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день памяти жертв рабства и трансатлантической работорговли"
@@ -6972,7 +6972,7 @@
    "month": "March",
    "day": "26",
    "report": {
-    "Stats": "*Вторник, 26 марта 2019 года*\n85-й день года. До конца года 280 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -7012,7 +7012,7 @@
    "month": "March",
    "day": "27",
    "report": {
-    "Stats": "*Среда, 27 марта 2019 года*\n86-й день года. До конца года 279 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день театра"
@@ -7054,7 +7054,7 @@
    "month": "March",
    "day": "28",
    "report": {
-    "Stats": "*Четверг, 28 марта 2019 года*\n87-й день года. До конца года 278 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -7094,7 +7094,7 @@
    "month": "March",
    "day": "29",
    "report": {
-    "Stats": "*Пятница, 29 марта 2019 года*\n88-й день года. До конца года 277 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -7133,7 +7133,7 @@
    "month": "March",
    "day": "3",
    "report": {
-    "Stats": "*Воскресенье, 3 марта 2019 года*\n62-й день года. До конца года 303 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день писателя",
@@ -7175,7 +7175,7 @@
    "month": "March",
    "day": "30",
    "report": {
-    "Stats": "*Суббота, 30 марта 2019 года*\n89-й день года. До конца года 276 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -7213,7 +7213,7 @@
    "month": "March",
    "day": "31",
    "report": {
-    "Stats": "*Воскресенье, 31 марта 2019 года*\n90-й день года. До конца года 275 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день резервного копирования (День бэкапа)",
@@ -7254,7 +7254,7 @@
    "month": "March",
    "day": "4",
    "report": {
-    "Stats": "*Понедельник, 4 марта 2019 года*\n63-й день года. До конца года 302 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -7295,7 +7295,7 @@
    "month": "March",
    "day": "5",
    "report": {
-    "Stats": "*Вторник, 5 марта 2019 года*\n64-й день года. До конца года 301 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -7336,7 +7336,7 @@
    "month": "March",
    "day": "6",
    "report": {
-    "Stats": "*Среда, 6 марта 2019 года*\n65-й день года. До конца года 300 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -7379,7 +7379,7 @@
    "month": "March",
    "day": "7",
    "report": {
-    "Stats": "*Четверг, 7 марта 2019 года*\n66-й день года. До конца года 299 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": null,
@@ -7417,7 +7417,7 @@
    "month": "March",
    "day": "8",
    "report": {
-    "Stats": "*Пятница, 8 марта 2019 года*\n67-й день года. До конца года 298 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — Международный женский день"
@@ -7467,7 +7467,7 @@
    "month": "March",
    "day": "9",
    "report": {
-    "Stats": "*Суббота, 9 марта 2019 года*\n68-й день года. До конца года 297 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -7510,7 +7510,7 @@
    "month": "April",
    "day": "1",
    "report": {
-    "Stats": "*Понедельник, 1 апреля 2019 года*\n91-й день года. До конца года 274 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "День смеха (День дураков)",
@@ -7563,7 +7563,7 @@
    "month": "April",
    "day": "10",
    "report": {
-    "Stats": "*Среда, 10 апреля 2019 года*\n100-й день года. До конца года 265 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день движения Сопротивления"
@@ -7605,7 +7605,7 @@
    "month": "April",
    "day": "11",
    "report": {
-    "Stats": "*Четверг, 11 апреля 2019 года*\n101-й день года. До конца года 264 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день борьбы с болезнью Паркинсона",
@@ -7648,7 +7648,7 @@
    "month": "April",
    "day": "12",
    "report": {
-    "Stats": "*Пятница, 12 апреля 2019 года*\n102-й день года. До конца года 263 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день полёта человека в космос"
@@ -7692,7 +7692,7 @@
    "month": "April",
    "day": "13",
    "report": {
-    "Stats": "*Суббота, 13 апреля 2019 года*\n103-й день года. До конца года 262 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный День рок-н-ролла"
@@ -7733,7 +7733,7 @@
    "month": "April",
    "day": "14",
    "report": {
-    "Stats": "*Воскресенье, 14 апреля 2019 года*\n104-й день года. До конца года 261 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -7773,7 +7773,7 @@
    "month": "April",
    "day": "15",
    "report": {
-    "Stats": "*Понедельник, 15 апреля 2019 года*\n105-й день года. До конца года 260 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день культуры"
@@ -7825,7 +7825,7 @@
    "month": "April",
    "day": "16",
    "report": {
-    "Stats": "*Вторник, 16 апреля 2019 года*\n106-й день года. До конца года 259 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -7864,7 +7864,7 @@
    "month": "April",
    "day": "17",
    "report": {
-    "Stats": "*Среда, 17 апреля 2019 года*\n107-й день года. До конца года 258 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день гемофилии"
@@ -7910,7 +7910,7 @@
    "month": "April",
    "day": "18",
    "report": {
-    "Stats": "*Четверг, 18 апреля 2019 года*\n108-й день года. До конца года 257 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день радиолюбителя",
@@ -7956,7 +7956,7 @@
    "month": "April",
    "day": "19",
    "report": {
-    "Stats": "*Пятница, 19 апреля 2019 года*\n109-й день года. До конца года 256 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -7994,7 +7994,7 @@
    "month": "April",
    "day": "2",
    "report": {
-    "Stats": "*Вторник, 2 апреля 2019 года*\n92-й день года. До конца года 273 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — Всемирный день распространения информации о проблеме аутизма",
@@ -8034,7 +8034,7 @@
    "month": "April",
    "day": "20",
    "report": {
-    "Stats": "*Суббота, 20 апреля 2019 года*\n110-й день года. До конца года 255 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — День китайского языка в ООН"
@@ -8072,7 +8072,7 @@
    "month": "April",
    "day": "21",
    "report": {
-    "Stats": "*Воскресенье, 21 апреля 2019 года*\n111-й день года. До конца года 254 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -8116,7 +8116,7 @@
    "month": "April",
    "day": "22",
    "report": {
-    "Stats": "*Понедельник, 22 апреля 2019 года*\n112-й день года. До конца года 253 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день Земли"
@@ -8154,7 +8154,7 @@
    "month": "April",
    "day": "23",
    "report": {
-    "Stats": "*Вторник, 23 апреля 2019 года*\n113-й день года. До конца года 252 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ЮНЕСКО — Всемирный день книг и авторского права",
@@ -8196,7 +8196,7 @@
    "month": "April",
    "day": "24",
    "report": {
-    "Stats": "*Среда, 24 апреля 2019 года*\n114-й день года. До конца года 251 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день солидарности молодёжи",
@@ -8240,7 +8240,7 @@
    "month": "April",
    "day": "25",
    "report": {
-    "Stats": "*Четверг, 25 апреля 2019 года*\n115-й день года. До конца года 250 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН: Всемирный день борьбы против малярии",
@@ -8289,7 +8289,7 @@
    "month": "April",
    "day": "26",
    "report": {
-    "Stats": "*Пятница, 26 апреля 2019 года*\n116-й день года. До конца года 249 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день интеллектуальной собственности",
@@ -8328,7 +8328,7 @@
    "month": "April",
    "day": "27",
    "report": {
-    "Stats": "*Суббота, 27 апреля 2019 года*\n117-й день года. До конца года 248 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -8370,7 +8370,7 @@
    "month": "April",
    "day": "28",
    "report": {
-    "Stats": "*Воскресенье, 28 апреля 2019 года*\n118-й день года. До конца года 247 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день охраны труда"
@@ -8408,7 +8408,7 @@
    "month": "April",
    "day": "29",
    "report": {
-    "Stats": "*Понедельник, 29 апреля 2019 года*\n119-й день года. До конца года 246 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день танца"
@@ -8454,7 +8454,7 @@
    "month": "April",
    "day": "3",
    "report": {
-    "Stats": "*Среда, 3 апреля 2019 года*\n93-й день года. До конца года 272 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Гвинея — День провозглашения Второй Республики (1984)"
@@ -8489,7 +8489,7 @@
    "month": "April",
    "day": "30",
    "report": {
-    "Stats": "*Вторник, 30 апреля 2019 года*\n120-й день года. До конца года 245 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день джаза"
@@ -8534,7 +8534,7 @@
    "month": "April",
    "day": "4",
    "report": {
-    "Stats": "*Четверг, 4 апреля 2019 года*\n94-й день года. До конца года 271 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "День Интернета"
@@ -8579,7 +8579,7 @@
    "month": "April",
    "day": "5",
    "report": {
-    "Stats": "*Пятница, 5 апреля 2019 года*\n95-й день года. До конца года 270 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный День супа"
@@ -8616,7 +8616,7 @@
    "month": "April",
    "day": "6",
    "report": {
-    "Stats": "*Суббота, 6 апреля 2019 года*\n96-й день года. До конца года 269 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "День Тартана"
@@ -8664,7 +8664,7 @@
    "month": "April",
    "day": "7",
    "report": {
-    "Stats": "*Воскресенье, 7 апреля 2019 года*\n97-й день года. До конца года 268 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день здоровья",
@@ -8716,7 +8716,7 @@
    "month": "April",
    "day": "8",
    "report": {
-    "Stats": "*Понедельник, 8 апреля 2019 года*\n98-й день года. До конца года 267 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день цыган"
@@ -8756,7 +8756,7 @@
    "month": "April",
    "day": "9",
    "report": {
-    "Stats": "*Вторник, 9 апреля 2019 года*\n99-й день года. До конца года 266 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -8801,7 +8801,7 @@
    "month": "May",
    "day": "1",
    "report": {
-    "Stats": "*Среда, 1 мая 2019 года*\n121-й день года. До конца года 244 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Первое мая (День международной солидарности трудящихся, Праздник Весны и Труда и др.)"
@@ -8847,7 +8847,7 @@
    "month": "May",
    "day": "10",
    "report": {
-    "Stats": "*Пятница, 10 мая 2019 года*\n130-й день года. До конца года 235 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Азербайджан — Праздник цветов",
@@ -8883,7 +8883,7 @@
    "month": "May",
    "day": "11",
    "report": {
-    "Stats": "*Суббота, 11 мая 2019 года*\n131-й день года. До конца года 234 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -8916,7 +8916,7 @@
    "month": "May",
    "day": "12",
    "report": {
-    "Stats": "*Воскресенье, 12 мая 2019 года*\n132-й день года. До конца года 233 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день медицинской сестры"
@@ -8949,7 +8949,7 @@
    "month": "May",
    "day": "13",
    "report": {
-    "Stats": "*Понедельник, 13 мая 2019 года*\n133-й день года. До конца года 232 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -8987,7 +8987,7 @@
    "month": "May",
    "day": "14",
    "report": {
-    "Stats": "*Вторник, 14 мая 2019 года*\n134-й день года. До конца года 231 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -9031,7 +9031,7 @@
    "month": "May",
    "day": "15",
    "report": {
-    "Stats": "*Среда, 15 мая 2019 года*\n135-й день года. До конца года 230 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — Международный день семей",
@@ -9086,7 +9086,7 @@
    "month": "May",
    "day": "16",
    "report": {
-    "Stats": "*Четверг, 16 мая 2019 года*\n136-й день года. До конца года 229 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -9129,7 +9129,7 @@
    "month": "May",
    "day": "17",
    "report": {
-    "Stats": "*Пятница, 17 мая 2019 года*\n137-й день года. До конца года 228 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день борьбы с гомофобией",
@@ -9172,7 +9172,7 @@
    "month": "May",
    "day": "18",
    "report": {
-    "Stats": "*Суббота, 18 мая 2019 года*\n138-й день года. До конца года 227 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день музеев"
@@ -9214,7 +9214,7 @@
    "month": "May",
    "day": "19",
    "report": {
-    "Stats": "*Воскресенье, 19 мая 2019 года*\n139-й день года. До конца года 226 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "День памяти геноцида малоазийских греков"
@@ -9261,7 +9261,7 @@
    "month": "May",
    "day": "2",
    "report": {
-    "Stats": "*Четверг, 2 мая 2019 года*\n122-й день года. До конца года 243 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -9294,7 +9294,7 @@
    "month": "May",
    "day": "20",
    "report": {
-    "Stats": "*Понедельник, 20 мая 2019 года*\n140-й день года. До конца года 225 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день метрологии",
@@ -9344,7 +9344,7 @@
    "month": "May",
    "day": "21",
    "report": {
-    "Stats": "*Вторник, 21 мая 2019 года*\n141-й день года. До конца года 224 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день космоса",
@@ -9386,7 +9386,7 @@
    "month": "May",
    "day": "22",
    "report": {
-    "Stats": "*Среда, 22 мая 2019 года*\n142-й день года. До конца года 223 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — Международный день биологического разнообразия"
@@ -9422,7 +9422,7 @@
    "month": "May",
    "day": "23",
    "report": {
-    "Stats": "*Четверг, 23 мая 2019 года*\n143-й день года. До конца года 222 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -9468,7 +9468,7 @@
    "month": "May",
    "day": "24",
    "report": {
-    "Stats": "*Пятница, 24 мая 2019 года*\n144-й день года. До конца года 221 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -9505,7 +9505,7 @@
    "month": "May",
    "day": "25",
    "report": {
-    "Stats": "*Суббота, 25 мая 2019 года*\n145-й день года. До конца года 220 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — День освобождения Африки",
@@ -9546,7 +9546,7 @@
    "month": "May",
    "day": "26",
    "report": {
-    "Stats": "*Воскресенье, 26 мая 2019 года*\n146-й день года. До конца года 219 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -9581,7 +9581,7 @@
    "month": "May",
    "day": "27",
    "report": {
-    "Stats": "*Понедельник, 27 мая 2019 года*\n147-й день года. До конца года 218 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -9620,7 +9620,7 @@
    "month": "May",
    "day": "28",
    "report": {
-    "Stats": "*Вторник, 28 мая 2019 года*\n148-й день года. До конца года 217 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -9658,7 +9658,7 @@
    "month": "May",
    "day": "29",
    "report": {
-    "Stats": "*Среда, 29 мая 2019 года*\n149-й день года. До конца года 216 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день миротворцев ООН",
@@ -9697,7 +9697,7 @@
    "month": "May",
    "day": "3",
    "report": {
-    "Stats": "*Пятница, 3 мая 2019 года*\n123-й день года. До конца года 242 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день свободы печати",
@@ -9751,7 +9751,7 @@
    "month": "May",
    "day": "30",
    "report": {
-    "Stats": "*Четверг, 30 мая 2019 года*\n150-й день года. До конца года 215 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -9792,7 +9792,7 @@
    "month": "May",
    "day": "31",
    "report": {
-    "Stats": "*Пятница, 31 мая 2019 года*\n151-й день года. До конца года 214 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день без табака",
@@ -9831,7 +9831,7 @@
    "month": "May",
    "day": "4",
    "report": {
-    "Stats": "*Суббота, 4 мая 2019 года*\n124-й день года. До конца года 241 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -9873,7 +9873,7 @@
    "month": "May",
    "day": "5",
    "report": {
-    "Stats": "*Воскресенье, 5 мая 2019 года*\n125-й день года. До конца года 240 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день борьбы за права инвалидов",
@@ -9923,7 +9923,7 @@
    "month": "May",
    "day": "6",
    "report": {
-    "Stats": "*Понедельник, 6 мая 2019 года*\n126-й день года. До конца года 239 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -9963,7 +9963,7 @@
    "month": "May",
    "day": "7",
    "report": {
-    "Stats": "*Вторник, 7 мая 2019 года*\n127-й день года. До конца года 238 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -10003,7 +10003,7 @@
    "month": "May",
    "day": "8",
    "report": {
-    "Stats": "*Среда, 8 мая 2019 года*\n128-й день года. До конца года 237 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день Красного Креста и Красного Полумесяца",
@@ -10049,7 +10049,7 @@
    "month": "May",
    "day": "9",
    "report": {
-    "Stats": "*Четверг, 9 мая 2019 года*\n129-й день года. До конца года 236 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Азербайджан,  Армения,  Белоруссия,  Грузия,  Израиль (с 2017 года),  Казахстан,  Киргизия,  Молдавия,  Россия,  Сербия,  Таджикистан,  Туркмения,  Черногория — День Победы",
@@ -10086,7 +10086,7 @@
    "month": "June",
    "day": "1",
    "report": {
-    "Stats": "*Суббота, 1 июня 2019 года*\n152-й день года. До конца года 213 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день защиты детей",
@@ -10129,7 +10129,7 @@
    "month": "June",
    "day": "10",
    "report": {
-    "Stats": "*Понедельник, 10 июня 2019 года*\n161-й день года. До конца года 204 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день модерна",
@@ -10171,7 +10171,7 @@
    "month": "June",
    "day": "11",
    "report": {
-    "Stats": "*Вторник, 11 июня 2019 года*\n162-й день года. До конца года 203 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -10218,7 +10218,7 @@
    "month": "June",
    "day": "12",
    "report": {
-    "Stats": "*Среда, 12 июня 2019 года*\n163-й день года. До конца года 202 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -10256,7 +10256,7 @@
    "month": "June",
    "day": "13",
    "report": {
-    "Stats": "*Четверг, 13 июня 2019 года*\n164-й день года. До конца года 201 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "День швейной машинки"
@@ -10290,7 +10290,7 @@
    "month": "June",
    "day": "14",
    "report": {
-    "Stats": "*Пятница, 14 июня 2019 года*\n165-й день года. До конца года 200 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день донора крови"
@@ -10328,7 +10328,7 @@
    "month": "June",
    "day": "15",
    "report": {
-    "Stats": "*Суббота, 15 июня 2019 года*\n166-й день года. До конца года 199 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -10366,7 +10366,7 @@
    "month": "June",
    "day": "16",
    "report": {
-    "Stats": "*Воскресенье, 16 июня 2019 года*\n167-й день года. До конца года 198 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день солидарности с борющимися народами Южной Африки",
@@ -10401,7 +10401,7 @@
    "month": "June",
    "day": "17",
    "report": {
-    "Stats": "*Понедельник, 17 июня 2019 года*\n168-й день года. До конца года 197 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — Всемирный день борьбы с опустыниванием и засухой"
@@ -10446,7 +10446,7 @@
    "month": "June",
    "day": "18",
    "report": {
-    "Stats": "*Вторник, 18 июня 2019 года*\n169-й день года. До конца года 196 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -10490,7 +10490,7 @@
    "month": "June",
    "day": "19",
    "report": {
-    "Stats": "*Среда, 19 июня 2019 года*\n170-й день года. До конца года 195 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -10529,7 +10529,7 @@
    "month": "June",
    "day": "2",
    "report": {
-    "Stats": "*Воскресенье, 2 июня 2019 года*\n153-й день года. До конца года 212 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -10563,7 +10563,7 @@
    "month": "June",
    "day": "20",
    "report": {
-    "Stats": "*Четверг, 20 июня 2019 года*\n171-й день года. До конца года 194 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — Всемирный день беженцев",
@@ -10604,7 +10604,7 @@
    "month": "June",
    "day": "21",
    "report": {
-    "Stats": "*Пятница, 21 июня 2019 года*\n172-й день года. До конца года 193 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день йоги",
@@ -10654,7 +10654,7 @@
    "month": "June",
    "day": "22",
    "report": {
-    "Stats": "*Суббота, 22 июня 2019 года*\n173-й день года. До конца года 192 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Казахстан,  Белоруссия,  Россия,  Украина — День памяти и скорби"
@@ -10694,7 +10694,7 @@
    "month": "June",
    "day": "23",
    "report": {
-    "Stats": "*Воскресенье, 23 июня 2019 года*\n174-й день года. До конца года 191 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — День государственной службы Организации Объединённых Наций",
@@ -10742,7 +10742,7 @@
    "month": "June",
    "day": "24",
    "report": {
-    "Stats": "*Понедельник, 24 июня 2019 года*\n175-й день года. До конца года 190 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Россия, Чувашия — День Республики Чувашия"
@@ -10794,7 +10794,7 @@
    "month": "June",
    "day": "25",
    "report": {
-    "Stats": "*Вторник, 25 июня 2019 года*\n176-й день года. До конца года 189 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "День моряка (День мореплавателя) (wikidata)",
@@ -10837,7 +10837,7 @@
    "month": "June",
    "day": "26",
    "report": {
-    "Stats": "*Среда, 26 июня 2019 года*\n177-й день года. До конца года 188 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — Международный день в поддержку жертв пыток",
@@ -10878,7 +10878,7 @@
    "month": "June",
    "day": "27",
    "report": {
-    "Stats": "*Четверг, 27 июня 2019 года*\n178-й день года. До конца года 187 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день рыболовства"
@@ -10917,7 +10917,7 @@
    "month": "June",
    "day": "28",
    "report": {
-    "Stats": "*Пятница, 28 июня 2019 года*\n179-й день года. До конца года 186 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -10953,7 +10953,7 @@
    "month": "June",
    "day": "29",
    "report": {
-    "Stats": "*Суббота, 29 июня 2019 года*\n180-й день года. До конца года 185 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -10999,7 +10999,7 @@
    "month": "June",
    "day": "3",
    "report": {
-    "Stats": "*Понедельник, 3 июня 2019 года*\n154-й день года. До конца года 211 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -11050,7 +11050,7 @@
    "month": "June",
    "day": "30",
    "report": {
-    "Stats": "*Воскресенье, 30 июня 2019 года*\n181-й день года. До конца года 184 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -11085,7 +11085,7 @@
    "month": "June",
    "day": "4",
    "report": {
-    "Stats": "*Вторник, 4 июня 2019 года*\n155-й день года. До конца года 210 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — Международный день невинных детей — жертв агрессии",
@@ -11129,7 +11129,7 @@
    "month": "June",
    "day": "5",
    "report": {
-    "Stats": "*Среда, 5 июня 2019 года*\n156-й день года. До конца года 209 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день окружающей среды"
@@ -11176,7 +11176,7 @@
    "month": "June",
    "day": "6",
    "report": {
-    "Stats": "*Четверг, 6 июня 2019 года*\n157-й день года. До конца года 208 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — День русского языка"
@@ -11214,7 +11214,7 @@
    "month": "June",
    "day": "7",
    "report": {
-    "Stats": "*Пятница, 7 июня 2019 года*\n158-й день года. До конца года 207 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -11254,7 +11254,7 @@
    "month": "June",
    "day": "8",
    "report": {
-    "Stats": "*Суббота, 8 июня 2019 года*\n159-й день года. До конца года 206 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — Всемирный день океанов"
@@ -11294,7 +11294,7 @@
    "month": "June",
    "day": "9",
    "report": {
-    "Stats": "*Воскресенье, 9 июня 2019 года*\n160-й день года. До конца года 205 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день аккредитации"
@@ -11338,7 +11338,7 @@
    "month": "July",
    "day": "1",
    "report": {
-    "Stats": "*Понедельник, 1 июля 2019 года*\n182-й день года. До конца года 183 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -11388,7 +11388,7 @@
    "month": "July",
    "day": "10",
    "report": {
-    "Stats": "*Среда, 10 июля 2019 года*\n191-й день года. До конца года 174 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -11424,7 +11424,7 @@
    "month": "July",
    "day": "11",
    "report": {
-    "Stats": "*Четверг, 11 июля 2019 года*\n192-й день года. До конца года 173 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — Всемирный день народонаселения",
@@ -11467,7 +11467,7 @@
    "month": "July",
    "day": "12",
    "report": {
-    "Stats": "*Пятница, 12 июля 2019 года*\n193-й день года. До конца года 172 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день бортпроводника",
@@ -11527,7 +11527,7 @@
    "month": "July",
    "day": "13",
    "report": {
-    "Stats": "*Суббота, 13 июля 2019 года*\n194-й день года. До конца года 171 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -11568,7 +11568,7 @@
    "month": "July",
    "day": "14",
    "report": {
-    "Stats": "*Воскресенье, 14 июля 2019 года*\n195-й день года. До конца года 170 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -11603,7 +11603,7 @@
    "month": "July",
    "day": "15",
    "report": {
-    "Stats": "*Понедельник, 15 июля 2019 года*\n196-й день года. До конца года 169 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -11649,7 +11649,7 @@
    "month": "July",
    "day": "16",
    "report": {
-    "Stats": "*Вторник, 16 июля 2019 года*\n197-й день года. До конца года 168 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -11681,7 +11681,7 @@
    "month": "July",
    "day": "17",
    "report": {
-    "Stats": "*Среда, 17 июля 2019 года*\n198-й день года. До конца года 167 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -11728,7 +11728,7 @@
    "month": "July",
    "day": "18",
    "report": {
-    "Stats": "*Четверг, 18 июля 2019 года*\n199-й день года. До конца года 166 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -11768,7 +11768,7 @@
    "month": "July",
    "day": "19",
    "report": {
-    "Stats": "*Пятница, 19 июля 2019 года*\n200-й день года. До конца года 165 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -11804,7 +11804,7 @@
    "month": "July",
    "day": "2",
    "report": {
-    "Stats": "*Вторник, 2 июля 2019 года*\n183-й день года. До конца года 182 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день спортивного журналиста"
@@ -11848,7 +11848,7 @@
    "month": "July",
    "day": "20",
    "report": {
-    "Stats": "*Суббота, 20 июля 2019 года*\n201-й день года. До конца года 164 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день шахмат"
@@ -11885,7 +11885,7 @@
    "month": "July",
    "day": "21",
    "report": {
-    "Stats": "*Воскресенье, 21 июля 2019 года*\n202-й день года. До конца года 163 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -11944,7 +11944,7 @@
    "month": "July",
    "day": "22",
    "report": {
-    "Stats": "*Понедельник, 22 июля 2019 года*\n203-й день года. До конца года 162 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -11980,7 +11980,7 @@
    "month": "July",
    "day": "23",
    "report": {
-    "Stats": "*Вторник, 23 июля 2019 года*\n204-й день года. До конца года 161 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день китов и дельфинов"
@@ -12017,7 +12017,7 @@
    "month": "July",
    "day": "24",
    "report": {
-    "Stats": "*Среда, 24 июля 2019 года*\n205-й день года. До конца года 160 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -12058,7 +12058,7 @@
    "month": "July",
    "day": "25",
    "report": {
-    "Stats": "*Четверг, 25 июля 2019 года*\n206-й день года. До конца года 159 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -12112,7 +12112,7 @@
    "month": "July",
    "day": "26",
    "report": {
-    "Stats": "*Пятница, 26 июля 2019 года*\n207-й день года. До конца года 158 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -12152,7 +12152,7 @@
    "month": "July",
    "day": "27",
    "report": {
-    "Stats": "*Суббота, 27 июля 2019 года*\n208-й день года. До конца года 157 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -12199,7 +12199,7 @@
    "month": "July",
    "day": "28",
    "report": {
-    "Stats": "*Воскресенье, 28 июля 2019 года*\n209-й день года. До конца года 156 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -12251,7 +12251,7 @@
    "month": "July",
    "day": "29",
    "report": {
-    "Stats": "*Понедельник, 29 июля 2019 года*\n210-й день года. До конца года 155 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день тигра"
@@ -12310,7 +12310,7 @@
    "month": "July",
    "day": "3",
    "report": {
-    "Stats": "*Среда, 3 июля 2019 года*\n184-й день года. До конца года 181 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -12349,7 +12349,7 @@
    "month": "July",
    "day": "30",
    "report": {
-    "Stats": "*Вторник, 30 июля 2019 года*\n211-й день года. До конца года 154 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — Международный день дружбы",
@@ -12401,7 +12401,7 @@
    "month": "July",
    "day": "31",
    "report": {
-    "Stats": "*Среда, 31 июля 2019 года*\n212-й день года. До конца года 153 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "День африканской женщины (провозглашён в 1962 году на Всеафриканской конференции женщин в Дар-эс-Саламе)"
@@ -12456,7 +12456,7 @@
    "month": "July",
    "day": "4",
    "report": {
-    "Stats": "*Четверг, 4 июля 2019 года*\n185-й день года. До конца года 180 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -12500,7 +12500,7 @@
    "month": "July",
    "day": "5",
    "report": {
-    "Stats": "*Пятница, 5 июля 2019 года*\n186-й день года. До конца года 179 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -12538,7 +12538,7 @@
    "month": "July",
    "day": "6",
    "report": {
-    "Stats": "*Суббота, 6 июля 2019 года*\n187-й день года. До конца года 178 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день поцелуя"
@@ -12596,7 +12596,7 @@
    "month": "July",
    "day": "7",
    "report": {
-    "Stats": "*Воскресенье, 7 июля 2019 года*\n188-й день года. До конца года 177 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Япония — Танабата, или фестиваль Звёзд (национальный японский праздник любви)"
@@ -12635,7 +12635,7 @@
    "month": "July",
    "day": "8",
    "report": {
-    "Stats": "*Понедельник, 8 июля 2019 года*\n189-й день года. До конца года 176 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -12674,7 +12674,7 @@
    "month": "July",
    "day": "9",
    "report": {
-    "Stats": "*Вторник, 9 июля 2019 года*\n190-й день года. До конца года 175 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -12720,7 +12720,7 @@
    "month": "August",
    "day": "1",
    "report": {
-    "Stats": "*Четверг, 1 августа 2019 года*\n213-й день года. До конца года 152 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -12787,7 +12787,7 @@
    "month": "August",
    "day": "10",
    "report": {
-    "Stats": "*Суббота, 10 августа 2019 года*\n222-й день года. До конца года 143 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -12865,7 +12865,7 @@
    "month": "August",
    "day": "11",
    "report": {
-    "Stats": "*Воскресенье, 11 августа 2019 года*\n223-й день года. До конца года 142 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -12909,7 +12909,7 @@
    "month": "August",
    "day": "12",
    "report": {
-    "Stats": "*Понедельник, 12 августа 2019 года*\n224-й день года. До конца года 141 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день молодёжи"
@@ -12978,7 +12978,7 @@
    "month": "August",
    "day": "13",
    "report": {
-    "Stats": "*Вторник, 13 августа 2019 года*\n225-й день года. До конца года 140 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день левши"
@@ -13032,7 +13032,7 @@
    "month": "August",
    "day": "14",
    "report": {
-    "Stats": "*Среда, 14 августа 2019 года*\n226-й день года. До конца года 139 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -13097,7 +13097,7 @@
    "month": "August",
    "day": "15",
    "report": {
-    "Stats": "*Четверг, 15 августа 2019 года*\n227-й день года. До конца года 138 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -13177,7 +13177,7 @@
    "month": "August",
    "day": "16",
    "report": {
-    "Stats": "*Пятница, 16 августа 2019 года*\n228-й день года. До конца года 137 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -13222,7 +13222,7 @@
    "month": "August",
    "day": "17",
    "report": {
-    "Stats": "*Суббота, 17 августа 2019 года*\n229-й день года. До конца года 136 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -13277,7 +13277,7 @@
    "month": "August",
    "day": "18",
    "report": {
-    "Stats": "*Воскресенье, 18 августа 2019 года*\n230-й день года. До конца года 135 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -13341,7 +13341,7 @@
    "month": "August",
    "day": "19",
    "report": {
-    "Stats": "*Понедельник, 19 августа 2019 года*\n231-й день года. До конца года 134 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день гуманитарной помощи"
@@ -13387,7 +13387,7 @@
    "month": "August",
    "day": "2",
    "report": {
-    "Stats": "*Пятница, 2 августа 2019 года*\n214-й день года. До конца года 151 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Ненецкий АО,  Республика Коми — День Оленя"
@@ -13486,7 +13486,7 @@
    "month": "August",
    "day": "20",
    "report": {
-    "Stats": "*Вторник, 20 августа 2019 года*\n232-й день года. До конца года 133 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -13553,7 +13553,7 @@
    "month": "August",
    "day": "21",
    "report": {
-    "Stats": "*Среда, 21 августа 2019 года*\n233-й день года. До конца года 132 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -13607,7 +13607,7 @@
    "month": "August",
    "day": "22",
    "report": {
-    "Stats": "*Четверг, 22 августа 2019 года*\n234-й день года. До конца года 131 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -13662,7 +13662,7 @@
    "month": "August",
    "day": "23",
    "report": {
-    "Stats": "*Пятница, 23 августа 2019 года*\n235-й день года. До конца года 130 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день памяти жертв работорговли и её ликвидации",
@@ -13718,7 +13718,7 @@
    "month": "August",
    "day": "24",
    "report": {
-    "Stats": "*Суббота, 24 августа 2019 года*\n236-й день года. До конца года 129 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -13791,7 +13791,7 @@
    "month": "August",
    "day": "25",
    "report": {
-    "Stats": "*Воскресенье, 25 августа 2019 года*\n237-й день года. До конца года 128 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -13834,7 +13834,7 @@
    "month": "August",
    "day": "26",
    "report": {
-    "Stats": "*Понедельник, 26 августа 2019 года*\n238-й день года. До конца года 127 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -13916,7 +13916,7 @@
    "month": "August",
    "day": "27",
    "report": {
-    "Stats": "*Вторник, 27 августа 2019 года*\n239-й день года. До конца года 126 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -13983,7 +13983,7 @@
    "month": "August",
    "day": "28",
    "report": {
-    "Stats": "*Среда, 28 августа 2019 года*\n240-й день года. До конца года 125 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": null,
@@ -14031,7 +14031,7 @@
    "month": "August",
    "day": "29",
    "report": {
-    "Stats": "*Четверг, 29 августа 2019 года*\n241-й день года. До конца года 124 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — Международный день действий против ядерных испытаний"
@@ -14093,7 +14093,7 @@
    "month": "August",
    "day": "3",
    "report": {
-    "Stats": "*Суббота, 3 августа 2019 года*\n215-й день года. До конца года 150 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -14138,7 +14138,7 @@
    "month": "August",
    "day": "30",
    "report": {
-    "Stats": "*Пятница, 30 августа 2019 года*\n242-й день года. До конца года 123 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — Международный день жертв насильственных исчезновений"
@@ -14187,7 +14187,7 @@
    "month": "August",
    "day": "31",
    "report": {
-    "Stats": "*Суббота, 31 августа 2019 года*\n243-й день года. До конца года 122 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -14257,7 +14257,7 @@
    "month": "August",
    "day": "4",
    "report": {
-    "Stats": "*Воскресенье, 4 августа 2019 года*\n216-й день года. До конца года 149 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -14310,7 +14310,7 @@
    "month": "August",
    "day": "5",
    "report": {
-    "Stats": "*Понедельник, 5 августа 2019 года*\n217-й день года. До конца года 148 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -14357,7 +14357,7 @@
    "month": "August",
    "day": "6",
    "report": {
-    "Stats": "*Вторник, 6 августа 2019 года*\n218-й день года. До конца года 147 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день «Врачи мира за мир»",
@@ -14422,7 +14422,7 @@
    "month": "August",
    "day": "7",
    "report": {
-    "Stats": "*Среда, 7 августа 2019 года*\n219-й день года. До конца года 146 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -14476,7 +14476,7 @@
    "month": "August",
    "day": "8",
    "report": {
-    "Stats": "*Четверг, 8 августа 2019 года*\n220-й день года. До конца года 145 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день кошек",
@@ -14528,7 +14528,7 @@
    "month": "August",
    "day": "9",
    "report": {
-    "Stats": "*Пятница, 9 августа 2019 года*\n221-й день года. До конца года 144 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день коренных народов мира"
@@ -14592,7 +14592,7 @@
    "month": "September",
    "day": "1",
    "report": {
-    "Stats": "*Воскресенье, 1 сентября 2019 года*\n244-й день года. До конца года 121 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -14637,7 +14637,7 @@
    "month": "September",
    "day": "10",
    "report": {
-    "Stats": "*Вторник, 10 сентября 2019 года*\n253-й день года. До конца года 112 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день предотвращения самоубийств"
@@ -14677,7 +14677,7 @@
    "month": "September",
    "day": "11",
    "report": {
-    "Stats": "*Среда, 11 сентября 2019 года*\n254-й день года. До конца года 111 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -14725,7 +14725,7 @@
    "month": "September",
    "day": "12",
    "report": {
-    "Stats": "*Четверг, 12 сентября 2019 года*\n255-й день года. До конца года 110 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "День сотрудничества Юг-Юг Организации Объединённых Наций"
@@ -14762,7 +14762,7 @@
    "month": "September",
    "day": "13",
    "report": {
-    "Stats": "*Пятница, 13 сентября 2019 года*\n256-й день года. До конца года 109 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -14798,7 +14798,7 @@
    "month": "September",
    "day": "14",
    "report": {
-    "Stats": "*Суббота, 14 сентября 2019 года*\n257-й день года. До конца года 108 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -14843,7 +14843,7 @@
    "month": "September",
    "day": "15",
    "report": {
-    "Stats": "*Воскресенье, 15 сентября 2019 года*\n258-й день года. До конца года 107 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день демократии",
@@ -14893,7 +14893,7 @@
    "month": "September",
    "day": "16",
    "report": {
-    "Stats": "*Понедельник, 16 сентября 2019 года*\n259-й день года. До конца года 106 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день охраны озонового слоя"
@@ -14932,7 +14932,7 @@
    "month": "September",
    "day": "17",
    "report": {
-    "Stats": "*Вторник, 17 сентября 2019 года*\n260-й день года. До конца года 105 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -14967,7 +14967,7 @@
    "month": "September",
    "day": "18",
    "report": {
-    "Stats": "*Среда, 18 сентября 2019 года*\n261-й день года. До конца года 104 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "День памяти погибших мотоциклистов",
@@ -15004,7 +15004,7 @@
    "month": "September",
    "day": "19",
    "report": {
-    "Stats": "*Четверг, 19 сентября 2019 года*\n262-й день года. До конца года 103 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -15044,7 +15044,7 @@
    "month": "September",
    "day": "2",
    "report": {
-    "Stats": "*Понедельник, 2 сентября 2019 года*\n245-й день года. До конца года 120 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -15093,7 +15093,7 @@
    "month": "September",
    "day": "20",
    "report": {
-    "Stats": "*Пятница, 20 сентября 2019 года*\n263-й день года. До конца года 102 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -15138,7 +15138,7 @@
    "month": "September",
    "day": "21",
    "report": {
-    "Stats": "*Суббота, 21 сентября 2019 года*\n264-й день года. До конца года 101 день\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН — Международный день мира",
@@ -15202,7 +15202,7 @@
    "month": "September",
    "day": "22",
    "report": {
-    "Stats": "*Воскресенье, 22 сентября 2019 года*\n265-й день года. До конца года 100 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день защиты слонов",
@@ -15248,7 +15248,7 @@
    "month": "September",
    "day": "23",
    "report": {
-    "Stats": "*Понедельник, 23 сентября 2019 года*\n266-й день года. До конца года 99 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "День борьбы с незавершением детьми средней школы",
@@ -15298,7 +15298,7 @@
    "month": "September",
    "day": "24",
    "report": {
-    "Stats": "*Вторник, 24 сентября 2019 года*\n267-й день года. До конца года 98 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день караванщика, учреждён Международной ассоциацией по рационализации транспортно-грузовых операций (ICHCA) в 1995 году"
@@ -15340,7 +15340,7 @@
    "month": "September",
    "day": "25",
    "report": {
-    "Stats": "*Среда, 25 сентября 2019 года*\n268-й день года. До конца года 97 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -15374,7 +15374,7 @@
    "month": "September",
    "day": "26",
    "report": {
-    "Stats": "*Четверг, 26 сентября 2019 года*\n269-й день года. До конца года 96 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день контрацепции",
@@ -15420,7 +15420,7 @@
    "month": "September",
    "day": "27",
    "report": {
-    "Stats": "*Пятница, 27 сентября 2019 года*\n270-й день года. До конца года 95 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день туризма",
@@ -15462,7 +15462,7 @@
    "month": "September",
    "day": "28",
    "report": {
-    "Stats": "*Суббота, 28 сентября 2019 года*\n271-й день года. До конца года 94 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН, Всемирный день борьбы против бешенства (World Rabies Day)",
@@ -15503,7 +15503,7 @@
    "month": "September",
    "day": "29",
    "report": {
-    "Stats": "*Воскресенье, 29 сентября 2019 года*\n272-й день года. До конца года 93 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": null,
@@ -15534,7 +15534,7 @@
    "month": "September",
    "day": "3",
    "report": {
-    "Stats": "*Вторник, 3 сентября 2019 года*\n246-й день года. До конца года 119 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -15596,7 +15596,7 @@
    "month": "September",
    "day": "30",
    "report": {
-    "Stats": "*Понедельник, 30 сентября 2019 года*\n273-й день года. До конца года 92 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день переводчика (учреждён Международной федерацией переводчиков в 1991 году)"
@@ -15636,7 +15636,7 @@
    "month": "September",
    "day": "4",
    "report": {
-    "Stats": "*Среда, 4 сентября 2019 года*\n247-й день года. До конца года 118 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день тхэквондо"
@@ -15681,7 +15681,7 @@
    "month": "September",
    "day": "5",
    "report": {
-    "Stats": "*Четверг, 5 сентября 2019 года*\n248-й день года. До конца года 117 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Международный день благотворительности"
@@ -15719,7 +15719,7 @@
    "month": "September",
    "day": "6",
    "report": {
-    "Stats": "*Пятница, 6 сентября 2019 года*\n249-й день года. До конца года 116 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": null,
     "HolidaysLoc": [
@@ -15755,7 +15755,7 @@
    "month": "September",
    "day": "7",
    "report": {
-    "Stats": "*Суббота, 7 сентября 2019 года*\n250-й день года. До конца года 115 дней\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "Всемирный день уничтожения военной игрушки",
@@ -15793,7 +15793,7 @@
    "month": "September",
    "day": "8",
    "report": {
-    "Stats": "*Воскресенье, 8 сентября 2019 года*\n251-й день года. До конца года 114 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "ООН Международный день грамотности — один из международных дней, отмечаемых в системе Организации Объединённых Наций",
@@ -15852,7 +15852,7 @@
    "month": "September",
    "day": "9",
    "report": {
-    "Stats": "*Понедельник, 9 сентября 2019 года*\n252-й день года. До конца года 113 дня\n",
+    "Stats": "",
     "Common": null,
     "HolidaysInt": [
      "США —  День принятия Калифорнии в Союз"

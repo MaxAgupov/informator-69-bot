@@ -21,7 +21,7 @@ func main() {
 	}
 
 	store := storage.NewStore(opts.Storage)
-	//holidays := wiki.LoadHolidays(opts.Holidays)
+	holidays := wiki.LoadHolidays(opts.Holidays)
 
 	bot, err := tgbotapi.NewBotAPI(opts.ApiToken)
 	if err != nil {
@@ -30,7 +30,7 @@ func main() {
 
 	bot.Debug = true
 
-	go publisher.Notifier(store, bot)
+	go publisher.NotifierFromFile(store, &holidays, bot)
 
 	log.Printf("Authorized on account %s", bot.Self.UserName)
 
