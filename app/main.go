@@ -52,7 +52,7 @@ func main() {
 					go store.RemoveChat(update.Message.Chat.ID)
 					publisher.SendMessage(update.Message.Chat.ID, "You won't be receiving useful information", bot)
 				case "info":
-					publisher.SendMessage(update.Message.Chat.ID, wiki.GetTodaysReport(), bot)
+					publisher.SendMessage(update.Message.Chat.ID, wiki.GetReport(&holidays), bot)
 				case "city":
 					go store.AddCity(update.Message)
 				case "full":
