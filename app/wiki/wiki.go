@@ -57,7 +57,6 @@ type Report struct {
 	HolidaysRlg  ReligiousHolidays
 	NameDays     []string
 	Omens        []string
-	//sections     map[string][]*Section
 }
 
 type ReligiousHolidayDescr struct {
@@ -92,11 +91,6 @@ func (holidays *ReligiousHolidays) AppendString(formatted *string) {
 		}
 	}
 }
-
-//type Section struct {
-//	header  string
-//	content []string
-//}
 
 func (report *Report) String() string {
 	formattedStr := ""
@@ -222,15 +216,15 @@ func getWikiReport(reportDay *time.Time) string {
 	return ""
 }
 
-func GetTodaysReport() string {
-	location, _ := time.LoadLocation(moscowLocation)
-	log.Print(location)
-	now := time.Now().In(location)
-	report := reportCache.getCachedReport(&now)
-	return report.String()
-}
+//func GetTodaysReport() string {
+//	location, _ := time.LoadLocation(moscowLocation)
+//	log.Print(location)
+//	now := time.Now().In(location)
+//	report := reportCache.getCachedReport(&now)
+//	return report.String()
+//}
 
-func GetNowReport(holidays *Holidays) string {
+func GetTodaysReport(holidays *Holidays) string {
 	location, _ := time.LoadLocation(moscowLocation)
 	log.Print(location)
 	today := time.Now().In(location)

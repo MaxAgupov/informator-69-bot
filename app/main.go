@@ -30,7 +30,7 @@ func main() {
 
 	bot.Debug = true
 
-	go publisher.NotifierFromFile(store, &holidays, bot)
+	go publisher.Notifier(store, &holidays, bot)
 
 	log.Printf("Authorized on account %s", bot.Self.UserName)
 
@@ -52,7 +52,7 @@ func main() {
 					go store.RemoveChat(update.Message.Chat.ID)
 					publisher.SendMessage(update.Message.Chat.ID, "You won't be receiving useful information", bot)
 				case "info":
-					publisher.SendMessage(update.Message.Chat.ID, wiki.GetNowReport(&holidays), bot)
+					publisher.SendMessage(update.Message.Chat.ID, wiki.GetTodaysReport(&holidays), bot)
 				case "city":
 					go store.AddCity(update.Message)
 				case "full":
