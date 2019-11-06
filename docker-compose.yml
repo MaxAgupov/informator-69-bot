@@ -4,7 +4,7 @@ bot:
   environment:
     - API_TOKEN
     - SUBSCR_STORAGE=/srv/config/activeChats.json
-    - HOLIDAYS_FILE=/srv/holidays/holidays.v1.9.json
+    - HOLIDAYS_FILE=/srv/holidays/holidays.v1.10.json
   volumes:
     - ../config:/srv/config
     - ./holidays:/srv/holidays
