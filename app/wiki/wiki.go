@@ -8,7 +8,6 @@ import (
 	"net/url"
 	"strconv"
 	"strings"
-	"sync"
 	"time"
 )
 
@@ -46,7 +45,7 @@ const nameDaysSubheader = "Именины"
 
 const moscowLocation = "Europe/Moscow"
 
-var reportCache = ReportCache{}
+//var reportCache = ReportCache{}
 
 type Report struct {
 	Stats        string
@@ -216,14 +215,6 @@ func getWikiReport(reportDay *time.Time) string {
 	return ""
 }
 
-//func GetTodaysReport() string {
-//	location, _ := time.LoadLocation(moscowLocation)
-//	log.Print(location)
-//	now := time.Now().In(location)
-//	report := reportCache.getCachedReport(&now)
-//	return report.String()
-//}
-
 func GetTodaysReport(holidays *Holidays) string {
 	location, _ := time.LoadLocation(moscowLocation)
 	log.Print(location)
@@ -294,32 +285,32 @@ func GenerateCalendarStats(reportDay *time.Time) string {
 	return firstLine + "\n" + secondLine + "\n"
 }
 
-type ReportCache struct {
-	sync.Mutex
-	year   int
-	month  time.Month
-	day    int
-	report *Report
-}
-
-func (cache *ReportCache) getCachedReport(date *time.Time) Report {
-	cache.Lock()
-	defer cache.Unlock()
-	year, month, day := date.Date()
-	if year == cache.year && month == cache.month && day == cache.day {
-		return *cache.report
-	}
-	fullReport := getWikiReport(date)
-	report, err := Parse(fullReport)
-	if err != nil {
-		log.Print("Error:", err)
-		return Report{}
-	}
-	report.setCalendarInfo(date)
-	cache.report = &report
-	cache.year = year
-	cache.month = month
-	cache.day = day
-
-	return *cache.report
-}
+//type ReportCache struct {
+//	sync.Mutex
+//	year   int
+//	month  time.Month
+//	day    int
+//	report *Report
+//}
+//
+//func (cache *ReportCache) getCachedReport(date *time.Time) Report {
+//	cache.Lock()
+//	defer cache.Unlock()
+//	year, month, day := date.Date()
+//	if year == cache.year && month == cache.month && day == cache.day {
+//		return *cache.report
+//	}
+//	fullReport := getWikiReport(date)
+//	report, err := Parse(fullReport)
+//	if err != nil {
+//		log.Print("Error:", err)
+//		return Report{}
+//	}
+//	report.setCalendarInfo(date)
+//	cache.report = &report
+//	cache.year = year
+//	cache.month = month
+//	cache.day = day
+//
+//	return *cache.report
+//}
