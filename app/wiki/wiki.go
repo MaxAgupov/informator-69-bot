@@ -1,11 +1,7 @@
 package wiki
 
 import (
-	"encoding/json"
-	"io/ioutil"
 	"log"
-	"net/http"
-	"net/url"
 	"strconv"
 	"strings"
 	"time"
@@ -44,8 +40,6 @@ const profHolidaysSubheader = "Профессиональные"
 const nameDaysSubheader = "Именины"
 
 const moscowLocation = "Europe/Moscow"
-
-//var reportCache = ReportCache{}
 
 type Report struct {
 	Stats        string
@@ -125,17 +119,17 @@ func (report *Report) String() string {
 
 	if len(report.NameDays) > 0 {
 		formattedStr += "\n_" + nameDaysSubheader + "_"
-		append := false
+		needAppend := false
 		for _, line := range report.NameDays {
 			if strings.Contains(line, ":") {
 				formattedStr += "\n- " + line
-				append = false
+				needAppend = false
 			} else {
-				if append {
+				if needAppend {
 					formattedStr += ", " + line
 				} else {
 					formattedStr += "\n- " + line
-					append = true
+					needAppend = true
 				}
 			}
 		}
@@ -177,44 +171,6 @@ type Pages struct {
 	NS      uint64 `json:"ns"`
 }
 
-func getWikiReport(reportDay *time.Time) string {
-	wikiRequest := "https://ru.wikipedia.org/w/api.php?action=query&format=json&&prop=extracts&exlimit=1&explaintext"
-	data := getDateString(reportDay)
-	wikiRequest += "&titles=" + url.QueryEscape(data)
-
-	log.Print(wikiRequest)
-	if response, err := http.Get(wikiRequest); err != nil {
-		log.Print("Wikipedia is not respond")
-	} else {
-		defer func() {
-			if err := response.Body.Close(); err != nil {
-				log.Print(err)
-			}
-		}()
-		contents, err := ioutil.ReadAll(response.Body)
-		if err != nil {
-			log.Print(err)
-			return ""
-		}
-		var wr Response
-		if err := json.Unmarshal(contents, &wr); err != nil {
-			log.Print("Error", err)
-			return ""
-		}
-
-		if l := len(wr.Query.Pages); l == 0 || l > 1 {
-			log.Print("There must be only one page - ", l)
-			return ""
-		}
-		var content string
-		for _, v := range wr.Query.Pages {
-			content = v.Extract
-		}
-		return content
-	}
-	return ""
-}
-
 func GetTodaysReport(holidays *Holidays) string {
 	location, _ := time.LoadLocation(moscowLocation)
 	log.Print(location)
@@ -228,7 +184,6 @@ func GetReport(holidays *Holidays, report_date *time.Time) string {
 	report.setCalendarInfo(report_date)
 	return report.String()
 }
-
 
 func ExtractReport(holidays *Holidays, month time.Month, day int) Report {
 	log.Println("Extract info", month, day)
@@ -284,33 +239,3 @@ func GenerateCalendarStats(reportDay *time.Time) string {
 
 	return firstLine + "\n" + secondLine + "\n"
 }
-
-//type ReportCache struct {
-//	sync.Mutex
-//	year   int
-//	month  time.Month
-//	day    int
-//	report *Report
-//}
-//
-//func (cache *ReportCache) getCachedReport(date *time.Time) Report {
-//	cache.Lock()
-//	defer cache.Unlock()
-//	year, month, day := date.Date()
-//	if year == cache.year && month == cache.month && day == cache.day {
-//		return *cache.report
-//	}
-//	fullReport := getWikiReport(date)
-//	report, err := Parse(fullReport)
-//	if err != nil {
-//		log.Print("Error:", err)
-//		return Report{}
-//	}
-//	report.setCalendarInfo(date)
-//	cache.report = &report
-//	cache.year = year
-//	cache.month = month
-//	cache.day = day
-//
-//	return *cache.report
-//}
