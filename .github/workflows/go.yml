@@ -34,7 +34,7 @@ jobs:
       run: |
         pwd
         ls
-        go build -v . ./app
+        go build -v -o informator-69-bot ./app
 
     - name: Test
-      run: go test -v .
+      run: go test -race $(go list ./... | grep -v /vendor/)
