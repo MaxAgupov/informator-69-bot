@@ -1,0 +1,31 @@
+on:
+  release:
+    types: [created]
+
+name: Deploy to DO
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      
+    - name: Setup SSH
+      uses: kielabokkie/ssh-key-and-known-hosts-action@v1.0.2
+      with:
+        # Private key required to access the host
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        # Hostname or IP to add to the known hosts file
+        ssh-host: ${{ secrets.DEPLOY_HOST }}
+          
+    - name: Prepare Digital Ocean instance and deploy
+      env:
+        REPO_NAME: informator-69-bot
+        REPO_HOME: /root
+      run: |
+        tar -cvzf $HOME/$REPO_NAME.tar.gz --exclude-vcs ../
+        scp $HOME/$REPO_NAME.tar.gz scripts/deploy.sh root@${{ secrets.DEPLOY_HOST }}:$REPO_HOME
+        ssh root@${{ secrets.DEPLOY_HOST }} API_TOKEN=${{ secrets.API_TOKEN  }} "./deploy.sh"
