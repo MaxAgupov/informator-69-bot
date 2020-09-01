@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BOT_HOME=/root
+BOT_HOME=/root/deploy
 BOT_NAME=informator-69-bot
 
 echo "Stopping the $BOT_NAME"
