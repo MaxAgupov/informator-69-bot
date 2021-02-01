@@ -28,7 +28,7 @@ func main() {
 		log.Panic(err)
 	}
 
-	bot.Debug = true
+	bot.Debug = false
 
 	go publisher.Notifier(store, &holidays, bot)
 
