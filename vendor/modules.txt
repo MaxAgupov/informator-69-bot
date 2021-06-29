@@ -1,0 +1,12 @@
+# github.com/briandowns/openweathermap v0.0.0-20180605213918-2adae1e5d102
+## explicit
+github.com/briandowns/openweathermap
+# github.com/go-telegram-bot-api/telegram-bot-api v4.6.4+incompatible
+## explicit
+github.com/go-telegram-bot-api/telegram-bot-api
+# github.com/jessevdk/go-flags v1.4.0
+## explicit
+github.com/jessevdk/go-flags
+# github.com/technoweenie/multipartstreamer v1.0.1
+## explicit
+github.com/technoweenie/multipartstreamer
