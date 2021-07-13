@@ -9,6 +9,8 @@ FROM alpine:3.14.0
 
 WORKDIR /srv
 
+RUN apk --no-cache add tzdata
+
 COPY --from=builder /srv/informator-69-bot /srv
 
 CMD ["/srv/informator-69-bot"]
